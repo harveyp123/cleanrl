@@ -16,7 +16,7 @@ rl-video-*.json
 cleanrl_utils/charts_episode_reward
 tutorials
 .DS_Store
-*.tfevents.*
+# *.tfevents.*
 wandb
 openaigym.*
 videos/*
