@@ -51,6 +51,8 @@ def parse_args():
         help="the learning rate of the optimizer")
     parser.add_argument("--num-envs", type=int, default=8,
         help="the number of parallel game environments")
+    parser.add_argument("--num-agent", type=int, default=2,
+        help="the number of parallel game agent")
     parser.add_argument("--num-steps", type=int, default=128,
         help="the number of steps to run in each environment per policy rollout")
     parser.add_argument("--anneal-lr", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
@@ -158,11 +160,15 @@ if __name__ == "__main__":
             monitor_gym=True,
             save_code=True,
         )
-    writer = SummaryWriter(f"runs/{run_name}")
-    writer.add_text(
-        "hyperparameters",
-        "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
-    )
+    writer_list = []
+    for i in range(args.num_agent):
+        run_name = f"agent_{i}__{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+        writer = SummaryWriter(f"runs/{run_name}")
+        writer.add_text(
+            "hyperparameters",
+            "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
+        )
+        writer_list.append(writer)
 
     # TRY NOT TO MODIFY: seeding
     random.seed(args.seed)
@@ -173,65 +179,113 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
     # env setup
-    envs = gym.vector.SyncVectorEnv(
-        [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
-    )
-    assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+    envs_list = []
+    agent_list = []
+    optimizer_list = []
 
-    agent = Agent(envs).to(device)
-    optimizer = optim.Adam(agent.parameters(), lr=args.learning_rate, eps=1e-5)
+    obs_list = []
+    actions_list = []
+    logprobs_list = []
+    rewards_list = []
+    dones_list = []
+    values_list = []
 
-    # ALGO Logic: Storage setup
-    obs = torch.zeros((args.num_steps, args.num_envs) + envs.single_observation_space.shape).to(device)
-    actions = torch.zeros((args.num_steps, args.num_envs) + envs.single_action_space.shape).to(device)
-    logprobs = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    rewards = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    values = torch.zeros((args.num_steps, args.num_envs)).to(device)
+    finished_runs_list = []
+    avg_return_list = []
+    avg_length_list = []
 
-    # TRY NOT TO MODIFY: start the game
+    next_obs_list = []
+    next_done_list = []
+    for i in range(args.num_agent):
+        envs = gym.vector.SyncVectorEnv(
+            [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
+        )
+        assert isinstance(envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+        envs_list.append(envs)
+
+        agent = Agent(envs).to(device)
+        agent_list.append(agent)
+
+        optimizer = optim.Adam(agent.parameters(), lr=args.learning_rate, eps=1e-5)
+        optimizer_list.append(optimizer)
+
+        # ALGO Logic: Storage setup
+        obs = torch.zeros((args.num_steps, args.num_envs) + envs.single_observation_space.shape).to(device)
+        actions = torch.zeros((args.num_steps, args.num_envs) + envs.single_action_space.shape).to(device)
+        logprobs = torch.zeros((args.num_steps, args.num_envs)).to(device)
+        rewards = torch.zeros((args.num_steps, args.num_envs)).to(device)
+        dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
+        values = torch.zeros((args.num_steps, args.num_envs)).to(device)
+
+        obs_list.append(obs)
+        actions_list.append(actions)
+        logprobs_list.append(logprobs)
+        rewards_list.append(rewards)
+        dones_list.append(dones)
+        values_list.append(values)
+
+        # TRY NOT TO MODIFY: variables necessary to record the game while starting the game
+        
+        finished_runs = 0
+        avg_return = 0.0
+        avg_length = 0.0
+        
+        finished_runs_list.append(finished_runs)
+        avg_return_list.append(avg_return)
+        avg_length_list.append(avg_length)
+
+        next_obs = torch.Tensor(envs.reset()).to(device)
+        next_done = torch.zeros(args.num_envs).to(device)
+        
+        next_obs_list.append(next_obs)
+        next_done_list.append(next_done)
+
     global_step = 0
-    finished_runs = 0
-    avg_return = 0.0
-    avg_length = 0.0
-    start_time = time.time()
-    next_obs = torch.Tensor(envs.reset()).to(device)
-    next_done = torch.zeros(args.num_envs).to(device)
     num_updates = args.total_timesteps // args.batch_size
+        
+        
+
+
+    
+    start_time = time.time()
+
+
 
     for update in range(1, num_updates + 1):
         # Annealing the rate if instructed to do so.
         if args.anneal_lr:
             frac = 1.0 - (update - 1.0) / num_updates
             lrnow = frac * args.learning_rate
-            optimizer.param_groups[0]["lr"] = lrnow
+            for optimizer in optimizer_list:
+                optimizer.param_groups[0]["lr"] = lrnow
 
         for step in range(0, args.num_steps):
             global_step += 1 * args.num_envs
-            obs[step] = next_obs
-            dones[step] = next_done
+            for i in range(args.num_agent):
+                obs_list[i][step] = next_obs_list[i]
+                dones_list[i][step] = next_done_list[i]
 
-            # ALGO LOGIC: action logic
-            with torch.no_grad():
-                action, logprob, _, value = agent.get_action_and_value(next_obs)
-                values[step] = value.flatten()
-            actions[step] = action
-            logprobs[step] = logprob
+                # ALGO LOGIC: action logic
+                with torch.no_grad():
+                    action, logprob, _, value = agent_list[i].get_action_and_value(next_obs_list[i])
+                    values_list[i][step] = value.flatten()
+                actions_list[i][step] = action
+                logprobs_list[i][step] = logprob
 
-            # TRY NOT TO MODIFY: execute the game and log data.
-            next_obs, reward, done, info = envs.step(action.cpu().numpy())
-            rewards[step] = torch.tensor(reward).to(device).view(-1)
-            next_obs, next_done = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(device)
+                # TRY NOT TO MODIFY: execute the game and log data.
+                next_obs, reward, done, info = envs.step(action.cpu().numpy())
+                rewards_list[i][step] = torch.tensor(reward).to(device).view(-1)
+                next_obs_list[i], next_done_list[i] = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(device)
 
-            for item in info:
-                if "episode" in item.keys():
-                    finished_runs += 1
-                    print(f"finished_runs={finished_runs}, episodic_return={item['episode']['r']}")
-                    avg_return = 0.9 * avg_return + 0.1 * item["episode"]["r"]
-                    avg_length = 0.9 * avg_length + 0.1 * item["episode"]["l"]
-                    writer.add_scalar("charts/episodic_return", avg_return, finished_runs)
-                    writer.add_scalar("charts/episodic_length", avg_length, finished_runs)
-                    # break
+                for item in info:
+                    if "episode" in item.keys():
+                        finished_runs_list[i] += 1
+                        print(f"Agent {i} play result: finished_runs={finished_runs_list[i]}, episodic_return={item['episode']['r']}")
+                        avg_return_list[i] = 0.9 * avg_return_list[i] + 0.1 * item["episode"]["r"]
+                        avg_length_list[i] = 0.9 * avg_length_list[i] + 0.1 * item["episode"]["l"]
+                        writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_runs_list[i])
+                        writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
+                        # break
 
         # bootstrap value if not done
         with torch.no_grad():
