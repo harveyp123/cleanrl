@@ -142,7 +142,7 @@ class Agent(nn.Module):
         probs = Categorical(logits=logits)
         if action is None:
             action = probs.sample()
-        return action, probs.log_prob(action), probs.entropy(), self.critic(hidden)
+        return action, probs.log_prob(action), probs.entropy(), self.critic(hidden), logits
 
 
 if __name__ == "__main__":
@@ -267,7 +267,7 @@ if __name__ == "__main__":
 
                 # ALGO LOGIC: action logic
                 with torch.no_grad():
-                    action, logprob, _, value = agent_list[i].get_action_and_value(next_obs_list[i])
+                    action, logprob, _, value, _ = agent_list[i].get_action_and_value(next_obs_list[i])
                     values_list[i][step] = value.flatten()
                 actions_list[i][step] = action
                 logprobs_list[i][step] = logprob
@@ -350,67 +350,117 @@ if __name__ == "__main__":
                     mb_inds = b_inds[start:end]
                     mb_inds_list.append(mb_inds)
 
-                _, newlogprob, entropy, newvalue = agent.get_action_and_value(b_obs[mb_inds], b_actions.long()[mb_inds])
-                logratio = newlogprob - b_logprobs[mb_inds]
-                ratio = logratio.exp()
+                entropy_list = []
+                newvalue_list = []
+                logratio_list = []
+                ratio_list = []
+                logits_self_list = []
+                logits_other_list = []
+                for i in range(args.num_agent):
+                    logits_other = []
+                    ####### Pass the env observation to self agent
+                    for j in range(args.num_agent):
+                        
+                        if i == j:
+                            _, newlogprob, entropy, newvalue, logits = agent_list[j].get_action_and_value(b_obs_list[i][mb_inds_list[i]], b_actions_list[i].long()[mb_inds_list[i]])
+                            logratio = newlogprob - b_logprobs_list[i][mb_inds_list[i]]
+                            ratio = logratio.exp()
+
+                            entropy_list.append(entropy)
+                            newvalue_list.append(newvalue)
+                            logratio_list.append(logratio)
+                            ratio_list.append(ratio)
+                            logits_self_list.append(logits)
+                        else: 
+                            with torch.no_grad():
+                                _, _, _, _, logits = agent_list[j].get_action_and_value(b_obs_list[i][mb_inds_list[i]], b_actions_list[i].long()[mb_inds_list[i]])
+                                logits_other.append(logits)
+                    logits_other_list.append(logits_other)
+
+                old_approx_kl_list = []
+                approx_kl_list = []
 
                 with torch.no_grad():
                     # calculate approx_kl http://joschu.net/blog/kl-approx.html
-                    old_approx_kl = (-logratio).mean()
-                    approx_kl = ((ratio - 1) - logratio).mean()
-                    clipfracs += [((ratio - 1.0).abs() > args.clip_coef).float().mean().item()]
+                    for i in range(args.num_agent):
+                        old_approx_kl = (-logratio_list[i]).mean()
+                        approx_kl = ((ratio_list[i] - 1) - logratio_list[i]).mean()
+                        clipfracs_list[i] += [((ratio_list[i] - 1.0).abs() > args.clip_coef).float().mean().item()]
+                        
+                        old_approx_kl_list.append(old_approx_kl)
+                        approx_kl_list.append(approx_kl)
+                
+                loss = 0
 
-                mb_advantages = b_advantages[mb_inds]
-                if args.norm_adv:
-                    mb_advantages = (mb_advantages - mb_advantages.mean()) / (mb_advantages.std() + 1e-8)
+                
+                v_loss_list = []
+                
+                pg_loss_list = []
+                entropy_loss_list = []
+                
+                for i in range(args.num_agent):
+                    mb_advantages = b_advantages_list[i][mb_inds_list[i]]
+                    if args.norm_adv:
+                        mb_advantages = (mb_advantages - mb_advantages.mean()) / (mb_advantages.std() + 1e-8)
 
-                # Policy loss
-                pg_loss1 = -mb_advantages * ratio
-                pg_loss2 = -mb_advantages * torch.clamp(ratio, 1 - args.clip_coef, 1 + args.clip_coef)
-                pg_loss = torch.max(pg_loss1, pg_loss2).mean()
+                    # Policy loss
+                    pg_loss1 = -mb_advantages * ratio_list[i]
+                    pg_loss2 = -mb_advantages * torch.clamp(ratio_list[i], 1 - args.clip_coef, 1 + args.clip_coef)
+                    pg_loss = torch.max(pg_loss1, pg_loss2).mean()
 
-                # Value loss
-                newvalue = newvalue.view(-1)
-                if args.clip_vloss:
-                    v_loss_unclipped = (newvalue - b_returns[mb_inds]) ** 2
-                    v_clipped = b_values[mb_inds] + torch.clamp(
-                        newvalue - b_values[mb_inds],
-                        -args.clip_coef,
-                        args.clip_coef,
-                    )
-                    v_loss_clipped = (v_clipped - b_returns[mb_inds]) ** 2
-                    v_loss_max = torch.max(v_loss_unclipped, v_loss_clipped)
-                    v_loss = 0.5 * v_loss_max.mean()
-                else:
-                    v_loss = 0.5 * ((newvalue - b_returns[mb_inds]) ** 2).mean()
+                    # Value loss
+                    newvalue = newvalue_list[i].view(-1)
+                    if args.clip_vloss:
+                        v_loss_unclipped = (newvalue - b_returns_list[i][mb_inds_list[i]]) ** 2
+                        v_clipped = b_values_list[i][mb_inds_list[i]] + torch.clamp(
+                            newvalue - b_values_list[i][mb_inds_list[i]],
+                            -args.clip_coef,
+                            args.clip_coef,
+                        )
+                        v_loss_clipped = (v_clipped - b_returns_list[i][mb_inds_list[i]]) ** 2
+                        v_loss_max = torch.max(v_loss_unclipped, v_loss_clipped)
+                        v_loss = 0.5 * v_loss_max.mean()
+                    else:
+                        v_loss = 0.5 * ((newvalue - b_returns_list[i][mb_inds_list[i]]) ** 2).mean()
 
-                entropy_loss = entropy.mean()
-                loss = pg_loss - args.ent_coef * entropy_loss + v_loss * args.vf_coef
+                    entropy_loss = entropy_list[i].mean()
+                    loss += pg_loss - args.ent_coef * entropy_loss + v_loss * args.vf_coef
 
-                optimizer.zero_grad()
+                    v_loss_list.append(v_loss.item())
+                    pg_loss_list.append(pg_loss.item())
+                    entropy_loss_list.append(entropy_loss.item())
+
+                ##### Compute final gradient
+                for i in range(args.num_agent):
+                    optimizer_list[i].zero_grad()
                 loss.backward()
-                nn.utils.clip_grad_norm_(agent.parameters(), args.max_grad_norm)
-                optimizer.step()
+                for i in range(args.num_agent):
+                    nn.utils.clip_grad_norm_(agent_list[i].parameters(), args.max_grad_norm)
+                    optimizer_list[i].step()
 
-            if args.target_kl is not None:
-                if approx_kl > args.target_kl:
-                    break
+            ##### Disable this function since now we have multiple agent
+            # if args.target_kl is not None:
+            #     if approx_kl > args.target_kl:
+            #         break
 
-        y_pred, y_true = b_values.cpu().numpy(), b_returns.cpu().numpy()
-        var_y = np.var(y_true)
-        explained_var = np.nan if var_y == 0 else 1 - np.var(y_true - y_pred) / var_y
 
-        # TRY NOT TO MODIFY: record rewards for plotting purposes
-        writer.add_scalar("charts/learning_rate", optimizer.param_groups[0]["lr"], global_step)
-        writer.add_scalar("losses/value_loss", v_loss.item(), global_step)
-        writer.add_scalar("losses/policy_loss", pg_loss.item(), global_step)
-        writer.add_scalar("losses/entropy", entropy_loss.item(), global_step)
-        writer.add_scalar("losses/old_approx_kl", old_approx_kl.item(), global_step)
-        writer.add_scalar("losses/approx_kl", approx_kl.item(), global_step)
-        writer.add_scalar("losses/clipfrac", np.mean(clipfracs), global_step)
-        writer.add_scalar("losses/explained_variance", explained_var, global_step)
-        print("SPS:", int(global_step / (time.time() - start_time)))
-        writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
+        for i in range(args.num_agent):
+            y_pred, y_true = b_values_list[i].cpu().numpy(), b_returns_list[i].cpu().numpy()
+            var_y = np.var(y_true)
+            explained_var = np.nan if var_y == 0 else 1 - np.var(y_true - y_pred) / var_y
 
-    envs.close()
-    writer.close()
+            # TRY NOT TO MODIFY: record rewards for plotting purposes
+            writer_list[i].add_scalar("charts/learning_rate", optimizer_list[i].param_groups[0]["lr"], global_step)
+            writer_list[i].add_scalar("losses/value_loss", v_loss_list[i], global_step)
+            writer_list[i].add_scalar("losses/policy_loss", pg_loss_list[i], global_step)
+            writer_list[i].add_scalar("losses/entropy", entropy_loss_list[i], global_step)
+            writer_list[i].add_scalar("losses/old_approx_kl", old_approx_kl_list[i].item(), global_step)
+            writer_list[i].add_scalar("losses/approx_kl", approx_kl_list[i].item(), global_step)
+            writer_list[i].add_scalar("losses/clipfrac", np.mean(clipfracs_list[i]), global_step)
+            writer_list[i].add_scalar("losses/explained_variance", explained_var, global_step)
+            print("SPS:", int(global_step / (time.time() - start_time)))
+            writer_list[i].add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
+    
+    for i in range(args.num_agent):
+        envs_list[i].close()
+        writer_list[i].close()
