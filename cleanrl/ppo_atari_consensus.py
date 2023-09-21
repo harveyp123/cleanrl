@@ -256,8 +256,8 @@ if __name__ == "__main__":
         if args.anneal_lr:
             frac = 1.0 - (update - 1.0) / num_updates
             lrnow = frac * args.learning_rate
-            for optimizer in optimizer_list:
-                optimizer.param_groups[0]["lr"] = lrnow
+            for i in range(args.num_agent):
+                optimizer_list[i].param_groups[0]["lr"] = lrnow
 
         for step in range(0, args.num_steps):
             global_step += 1 * args.num_envs
@@ -287,38 +287,68 @@ if __name__ == "__main__":
                         writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
                         # break
 
+        advantages_list = []
+        returns_list = []
         # bootstrap value if not done
         with torch.no_grad():
-            next_value = agent.get_value(next_obs).reshape(1, -1)
-            advantages = torch.zeros_like(rewards).to(device)
-            lastgaelam = 0
-            for t in reversed(range(args.num_steps)):
-                if t == args.num_steps - 1:
-                    nextnonterminal = 1.0 - next_done
-                    nextvalues = next_value
-                else:
-                    nextnonterminal = 1.0 - dones[t + 1]
-                    nextvalues = values[t + 1]
-                delta = rewards[t] + args.gamma * nextvalues * nextnonterminal - values[t]
-                advantages[t] = lastgaelam = delta + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
-            returns = advantages + values
+            for i in range(args.num_agent):
+                next_value = agent_list[i].get_value(next_obs_list[i]).reshape(1, -1)
+                advantages = torch.zeros_like(rewards_list[i]).to(device)
+                lastgaelam = 0
+                for t in reversed(range(args.num_steps)):
+                    if t == args.num_steps - 1:
+                        nextnonterminal = 1.0 - next_done_list[i]
+                        nextvalues = next_value
+                    else:
+                        nextnonterminal = 1.0 - dones_list[i][t + 1]
+                        nextvalues = values_list[i][t + 1]
+                    delta = rewards_list[i][t] + args.gamma * nextvalues * nextnonterminal - values_list[i][t]
+                    advantages[t] = lastgaelam = delta + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
+                returns = advantages + values_list[i]
+                advantages_list.append(advantages)
+                returns_list.append(returns)
 
-        # flatten the batch
-        b_obs = obs.reshape((-1,) + envs.single_observation_space.shape)
-        b_logprobs = logprobs.reshape(-1)
-        b_actions = actions.reshape((-1,) + envs.single_action_space.shape)
-        b_advantages = advantages.reshape(-1)
-        b_returns = returns.reshape(-1)
-        b_values = values.reshape(-1)
+        b_obs_list = []
+        b_logprobs_list = []
+        b_actions_list = []
+        b_advantages_list = []
+        b_returns_list = []
+        b_values_list = []
+        for i in range(args.num_agent):
+            # flatten the batch
+            b_obs = obs_list[i].reshape((-1,) + envs_list[i].single_observation_space.shape)
+            b_logprobs = logprobs_list[i].reshape(-1)
+            b_actions = actions_list[i].reshape((-1,) + envs_list[i].single_action_space.shape)
+            b_advantages = advantages_list[i].reshape(-1)
+            b_returns = returns_list[i].reshape(-1)
+            b_values = values_list[i].reshape(-1)
+
+            b_obs_list.append(b_obs)
+            b_logprobs_list.append(b_logprobs)
+            b_actions_list.append(b_actions)
+            b_advantages_list.append(b_advantages)
+            b_returns_list.append(b_returns)
+            b_values_list.append(b_values)
 
         # Optimizing the policy and value network
-        b_inds = np.arange(args.batch_size)
-        clipfracs = []
+        b_inds_list = []
+        clipfracs_list = []
+        for i in range(args.num_agent):
+            b_inds = np.arange(args.batch_size)
+            b_inds_list.append(b_inds)
+            clipfracs = []
+            clipfracs_list.append(clipfracs)
+
         for epoch in range(args.update_epochs):
-            np.random.shuffle(b_inds)
+            for i in range(args.num_agent):
+                np.random.shuffle(b_inds_list[i])
             for start in range(0, args.batch_size, args.minibatch_size):
                 end = start + args.minibatch_size
-                mb_inds = b_inds[start:end]
+
+                mb_inds_list = []
+                for i in range(args.num_agent):
+                    mb_inds = b_inds[start:end]
+                    mb_inds_list.append(mb_inds)
 
                 _, newlogprob, entropy, newvalue = agent.get_action_and_value(b_obs[mb_inds], b_actions.long()[mb_inds])
                 logratio = newlogprob - b_logprobs[mb_inds]
