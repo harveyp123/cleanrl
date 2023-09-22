@@ -162,7 +162,7 @@ if __name__ == "__main__":
         )
     writer_list = []
     for i in range(args.num_agent):
-        run_name = f"agent_{i}__{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
+        run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}__agent_{i}"
         writer = SummaryWriter(f"runs/{run_name}")
         writer.add_text(
             "hyperparameters",
@@ -273,7 +273,7 @@ if __name__ == "__main__":
                 logprobs_list[i][step] = logprob
 
                 # TRY NOT TO MODIFY: execute the game and log data.
-                next_obs, reward, done, info = envs.step(action.cpu().numpy())
+                next_obs, reward, done, info = envs_list[i].step(action.cpu().numpy())
                 rewards_list[i][step] = torch.tensor(reward).to(device).view(-1)
                 next_obs_list[i], next_done_list[i] = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(device)
 
