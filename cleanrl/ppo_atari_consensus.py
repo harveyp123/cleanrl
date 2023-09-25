@@ -12,6 +12,10 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.distributions.categorical import Categorical
 from torch.utils.tensorboard import SummaryWriter
+import torch.nn.functional as F
+import ensemble_consensus_util as esb_util
+
+
 
 from stable_baselines3.common.atari_wrappers import (  # isort:skip
     ClipRewardEnv,
@@ -53,6 +57,11 @@ def parse_args():
         help="the number of parallel game environments")
     parser.add_argument("--num-agent", type=int, default=2,
         help="the number of parallel game agent")
+    parser.add_argument("--alpha-values", type=float, default=0,
+        help="distillation strength")
+    parser.add_argument("--test-ensemble", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
+        help="Test the ensemble agent or not")
+
     parser.add_argument("--num-steps", type=int, default=128,
         help="the number of steps to run in each environment per policy rollout")
     parser.add_argument("--anneal-lr", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
@@ -116,6 +125,7 @@ def layer_init(layer, std=np.sqrt(2), bias_const=0.0):
     return layer
 
 
+
 class Agent(nn.Module):
     def __init__(self, envs):
         super().__init__()
@@ -145,6 +155,30 @@ class Agent(nn.Module):
         return action, probs.log_prob(action), probs.entropy(), self.critic(hidden), logits
 
 
+class Agent_ensemble(nn.Module):
+    def __init__(self, agent_list):
+        self.agent_list = agent_list
+        self.num_models = len(agent_list)
+
+    def get_action(self, x, action=None):
+
+        # print("x shape:", x.shape)
+
+        logits = []
+        for i in range(self.num_models):
+            hidden = self.agent_list[i].network(x / 255.0)
+            logits.append(self.agent_list[i].actor(hidden))
+        # print("original logits shape:", logits[0].shape)
+        logits = esb_util.reduce_ensemble_logits(logits)
+
+        # print("logits shape:", logits.shape)
+
+        probs = Categorical(logits=logits)
+        if action is None:
+            action = probs.sample()
+        return action
+
+
 if __name__ == "__main__":
     args = parse_args()
     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
@@ -161,15 +195,21 @@ if __name__ == "__main__":
             save_code=True,
         )
     writer_list = []
+    run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
     for i in range(args.num_agent):
-        run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}__agent_{i}"
-        writer = SummaryWriter(f"runs/{run_name}")
+        
+        writer = SummaryWriter(f"runs/{run_name}/agent_{i}")
         writer.add_text(
             "hyperparameters",
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
         )
         writer_list.append(writer)
-
+    if args.test_ensemble:
+        writer_ensemble = SummaryWriter(f"runs/{run_name}/ensemble")
+        writer_ensemble.add_text(
+            "hyperparameters",
+            "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
+        )
     # TRY NOT TO MODIFY: seeding
     random.seed(args.seed)
     np.random.seed(args.seed)
@@ -240,13 +280,25 @@ if __name__ == "__main__":
         next_obs_list.append(next_obs)
         next_done_list.append(next_done)
 
+
+
+    ######## introduce an ensemble agent to play the game ########
+    if args.test_ensemble:
+        # env setup
+        envs_ensemble = gym.vector.SyncVectorEnv(
+            [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
+        )
+        assert isinstance(envs_ensemble.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
+
+        agent_ensemble = Agent_ensemble(agent_list)
+        next_obs_ensemble = torch.Tensor(envs_ensemble.reset()).to(device)
+        finished_runs_ensemble = 0.0
+        avg_return_ensemble = 0.0
+        avg_length_ensemble = 0.0
+
     global_step = 0
     num_updates = args.total_timesteps // args.batch_size
         
-        
-
-
-    
     start_time = time.time()
 
 
@@ -286,6 +338,27 @@ if __name__ == "__main__":
                         writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_runs_list[i])
                         writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
                         # break
+            ######## introduce an ensemble agent to play the game ########
+            if args.test_ensemble:
+                # ALGO LOGIC: action logic
+                with torch.no_grad():
+                    action = agent_ensemble.get_action(next_obs_ensemble)
+
+                # TRY NOT TO MODIFY: execute the game and log data.
+                next_obs_ensemble, reward, done, info = envs_ensemble.step(action.cpu().numpy())
+                next_obs_ensemble= torch.Tensor(next_obs_ensemble).to(device)
+
+                for item in info:
+                    if "episode" in item.keys():
+                        finished_runs_ensemble += 1
+                        avg_return_ensemble = 0.9 * avg_return_ensemble + 0.1 * item["episode"]["r"]
+                        avg_length_ensemble = 0.9 * avg_length_ensemble + 0.1 * item["episode"]["l"]
+
+                        print(f"Ensemble agent play result: finished_runs={finished_runs_ensemble}, episodic_return={item['episode']['r']}")
+                        writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_runs_ensemble)
+                        writer_ensemble.add_scalar("charts/episodic_length", avg_return_ensemble, finished_runs_ensemble)
+                        # break
+
 
         advantages_list = []
         returns_list = []
@@ -355,8 +428,11 @@ if __name__ == "__main__":
                 logratio_list = []
                 ratio_list = []
                 logits_self_list = []
+                ##### logits_other_list gives detached logits from all agents on all sets of b_obs #####
                 logits_other_list = []
                 for i in range(args.num_agent):
+
+                    ##### logits_other gives detached logits from all agents on current b_obs #####
                     logits_other = []
                     ####### Pass the env observation to self agent
                     for j in range(args.num_agent):
@@ -371,6 +447,8 @@ if __name__ == "__main__":
                             logratio_list.append(logratio)
                             ratio_list.append(ratio)
                             logits_self_list.append(logits)
+                            
+                            logits_other.append(logits.detach())
                         else: 
                             with torch.no_grad():
                                 _, _, _, _, logits = agent_list[j].get_action_and_value(b_obs_list[i][mb_inds_list[i]], b_actions_list[i].long()[mb_inds_list[i]])
