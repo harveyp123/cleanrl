@@ -9,8 +9,9 @@ def kl_div_logits(p, q, T):
     loss = loss_func(F.log_softmax(p/T, dim=-1), F.log_softmax(q/T, dim=-1)) * T * T
     return loss
 
-class ClassifierConsensusForthLoss(object):
+class ClassifierConsensusForthLoss(torch.nn.Module):
     def __init__(self, config):
+        super().__init__()
         self.models_num = config.num_agent
         self.alpha = config.alpha_values
         self.q = torch.nn.Parameter(torch.zeros(self.models_num))
@@ -18,9 +19,10 @@ class ClassifierConsensusForthLoss(object):
         for i in range(self.models_num):
             self.mask[i, i] = 0
         self.T = 1
-    
-    def foward(self, models_logits, models_logits_multiple):
-        
+        print("curren number of agent: ", self.models_num)
+        print("curren alpha: ", self.alpha)
+    def forward(self, models_logits, models_logits_multiple):
+        assert self.models_num == len(models_logits), "number of agents mismatch during consensus forward"
         q_logits =  torch.stack([F.log_softmax(self.q*self.mask[i] - (1 - self.mask[i])*1e10, dim=0).cuda().view(self.models_num, 1, 1) for i in range(self.models_num)])
         models_pred = torch.stack([F.log_softmax(models_logits[i], dim=-1) for i in range(self.models_num)])
         models_pred_multi = [0 for _ in range(self.models_num)]

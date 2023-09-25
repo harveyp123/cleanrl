@@ -157,6 +157,7 @@ class Agent(nn.Module):
 
 class Agent_ensemble(nn.Module):
     def __init__(self, agent_list):
+        super().__init__()
         self.agent_list = agent_list
         self.num_models = len(agent_list)
 
@@ -181,31 +182,18 @@ class Agent_ensemble(nn.Module):
 
 if __name__ == "__main__":
     args = parse_args()
-    run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
-    if args.track:
-        import wandb
-
-        wandb.init(
-            project=args.wandb_project_name,
-            entity=args.wandb_entity,
-            sync_tensorboard=True,
-            config=vars(args),
-            name=run_name,
-            monitor_gym=True,
-            save_code=True,
-        )
+    run_name = f"{args.env_id}__{args.alpha_values}__{args.seed}__{int(time.time())}"
     writer_list = []
-    run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
     for i in range(args.num_agent):
         
-        writer = SummaryWriter(f"runs/{run_name}/agent_{i}")
+        writer = SummaryWriter(f"runs/{args.exp_name}/{run_name}/agent_{i}")
         writer.add_text(
             "hyperparameters",
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
         )
         writer_list.append(writer)
     if args.test_ensemble:
-        writer_ensemble = SummaryWriter(f"runs/{run_name}/ensemble")
+        writer_ensemble = SummaryWriter(f"runs/{args.exp_name}/{run_name}/ensemble")
         writer_ensemble.add_text(
             "hyperparameters",
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
@@ -281,6 +269,9 @@ if __name__ == "__main__":
         next_done_list.append(next_done)
 
 
+    consensus_model = esb_util.ClassifierConsensusForthLoss(args)
+    optimizer_consensus = optim.Adam(consensus_model.parameters(), lr=args.learning_rate, eps=1e-5)
+
 
     ######## introduce an ensemble agent to play the game ########
     if args.test_ensemble:
@@ -310,7 +301,7 @@ if __name__ == "__main__":
             lrnow = frac * args.learning_rate
             for i in range(args.num_agent):
                 optimizer_list[i].param_groups[0]["lr"] = lrnow
-
+            optimizer_consensus.param_groups[0]["lr"] = lrnow
         for step in range(0, args.num_steps):
             global_step += 1 * args.num_envs
             for i in range(args.num_agent):
@@ -508,13 +499,16 @@ if __name__ == "__main__":
                     pg_loss_list.append(pg_loss.item())
                     entropy_loss_list.append(entropy_loss.item())
 
+                loss += consensus_model(logits_self_list, logits_other_list)
                 ##### Compute final gradient
                 for i in range(args.num_agent):
                     optimizer_list[i].zero_grad()
+                optimizer_consensus.zero_grad()
                 loss.backward()
                 for i in range(args.num_agent):
                     nn.utils.clip_grad_norm_(agent_list[i].parameters(), args.max_grad_norm)
                     optimizer_list[i].step()
+                optimizer_consensus.step()
 
             ##### Disable this function since now we have multiple agent
             # if args.target_kl is not None:
