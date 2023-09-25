@@ -182,7 +182,7 @@ class Agent_ensemble(nn.Module):
 
 if __name__ == "__main__":
     args = parse_args()
-    run_name = f"{args.env_id}__{args.alpha_values}__{args.seed}__{int(time.time())}"
+    run_name = f"{args.env_id}__alpha{args.alpha_values}__seed{args.seed}__{int(time.time())}"
     writer_list = []
     for i in range(args.num_agent):
         
