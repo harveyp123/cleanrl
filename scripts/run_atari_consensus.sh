@@ -1,5 +1,8 @@
 mkdir -p ./log/consensus/
 # export n_agent=2
+# export alpha=0.0
+
+# export n_agent=2
 # export alpha=1.0
 
 export n_agent=2

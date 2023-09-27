@@ -53,6 +53,8 @@ def parse_args():
         help="total timesteps of the experiments")
     parser.add_argument("--learning-rate", type=float, default=2.5e-4,
         help="the learning rate of the optimizer")
+    parser.add_argument("--learning-rate-min", type=float, default=2.5e-6,
+        help="the minimum learning rate of the optimizer")
     parser.add_argument("--num-envs", type=int, default=8,
         help="the number of parallel game environments")
     parser.add_argument("--num-agent", type=int, default=2,
@@ -206,10 +208,16 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
+    #### number of update epochs
+    num_updates = args.total_timesteps // args.batch_size
+
+
     # env setup
     envs_list = []
     agent_list = []
     optimizer_list = []
+    lr_scheduler_list = []
+    
 
     obs_list = []
     actions_list = []
@@ -236,6 +244,8 @@ if __name__ == "__main__":
 
         optimizer = optim.Adam(agent.parameters(), lr=args.learning_rate, eps=1e-5)
         optimizer_list.append(optimizer)
+        lr_scheduler_list.append(torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = optimizer, T_max = num_updates, 
+                        eta_min = args.learning_rate_min))
 
         # ALGO Logic: Storage setup
         obs = torch.zeros((args.num_steps, args.num_envs) + envs.single_observation_space.shape).to(device)
@@ -271,7 +281,8 @@ if __name__ == "__main__":
 
     consensus_model = esb_util.ClassifierConsensusForthLoss(args)
     optimizer_consensus = optim.Adam(consensus_model.parameters(), lr=args.learning_rate, eps=1e-5)
-
+    lr_scheduler_consensus = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = optimizer_consensus, T_max = num_updates, 
+                        eta_min = args.learning_rate_min)
 
     ######## introduce an ensemble agent to play the game ########
     if args.test_ensemble:
@@ -288,20 +299,13 @@ if __name__ == "__main__":
         avg_length_ensemble = 0.0
 
     global_step = 0
-    num_updates = args.total_timesteps // args.batch_size
+    
         
     start_time = time.time()
 
 
 
     for update in range(1, num_updates + 1):
-        # Annealing the rate if instructed to do so.
-        if args.anneal_lr:
-            frac = 1.0 - (update - 1.0) / num_updates
-            lrnow = frac * args.learning_rate
-            for i in range(args.num_agent):
-                optimizer_list[i].param_groups[0]["lr"] = lrnow
-            optimizer_consensus.param_groups[0]["lr"] = lrnow
         for step in range(0, args.num_steps):
             global_step += 1 * args.num_envs
             for i in range(args.num_agent):
@@ -532,7 +536,20 @@ if __name__ == "__main__":
             writer_list[i].add_scalar("losses/explained_variance", explained_var, global_step)
             print("SPS:", int(global_step / (time.time() - start_time)))
             writer_list[i].add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
-    
+        # Annealing the rate if instructed to do so.
+
+        if args.anneal_lr:
+            ######## Original anneal
+            # frac = 1.0 - (update - 1.0) / num_updates
+            # lrnow = frac * args.learning_rate
+            # for i in range(args.num_agent):
+            #     optimizer_list[i].param_groups[0]["lr"] = lrnow
+            # optimizer_consensus.param_groups[0]["lr"] = lrnow
+            
+            ####### Cosine anneal
+            for lr_scheduler in lr_scheduler_list:
+                lr_scheduler.step()
+            lr_scheduler_consensus.step()
     for i in range(args.num_agent):
         envs_list[i].close()
         writer_list[i].close()
