@@ -69335,3 +69335,4573 @@ Agent 0 play result: finished_runs=11322, episodic_return=536.0
 SPS: 243
 SPS: 243
 Agent 0 play result: finished_runs=11323, episodic_return=386.0
+Ensemble agent play result: finished_runs=11391.0, episodic_return=837.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11392.0, episodic_return=447.0
+Ensemble agent play result: finished_runs=11393.0, episodic_return=834.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11324, episodic_return=783.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11394.0, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11367, episodic_return=417.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11325, episodic_return=418.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11368, episodic_return=818.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11395.0, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11326, episodic_return=433.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11327, episodic_return=434.0
+Agent 0 play result: finished_runs=11328, episodic_return=509.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11369, episodic_return=859.0
+Ensemble agent play result: finished_runs=11396.0, episodic_return=551.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11370, episodic_return=770.0
+Ensemble agent play result: finished_runs=11397.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11398.0, episodic_return=447.0
+Agent 0 play result: finished_runs=11329, episodic_return=616.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11399.0, episodic_return=724.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11330, episodic_return=469.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11331, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11371, episodic_return=427.0
+Ensemble agent play result: finished_runs=11400.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11332, episodic_return=427.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11401.0, episodic_return=776.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11402.0, episodic_return=829.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11372, episodic_return=864.0
+Agent 1 play result: finished_runs=11373, episodic_return=856.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11374, episodic_return=424.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11403.0, episodic_return=531.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11333, episodic_return=481.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11334, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11335, episodic_return=428.0
+Agent 1 play result: finished_runs=11375, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11336, episodic_return=705.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11337, episodic_return=468.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11404.0, episodic_return=427.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11405.0, episodic_return=797.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11376, episodic_return=427.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11406.0, episodic_return=410.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11407.0, episodic_return=505.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11338, episodic_return=419.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11377, episodic_return=430.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11378, episodic_return=602.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11339, episodic_return=503.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11340, episodic_return=444.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11379, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11341, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11380, episodic_return=707.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11408.0, episodic_return=779.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11409.0, episodic_return=864.0
+Agent 0 play result: finished_runs=11342, episodic_return=433.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11381, episodic_return=423.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11343, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11410.0, episodic_return=439.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11382, episodic_return=438.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11411.0, episodic_return=435.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11344, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11383, episodic_return=420.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11384, episodic_return=859.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11385, episodic_return=393.0
+Agent 0 play result: finished_runs=11345, episodic_return=466.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11346, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11412.0, episodic_return=522.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11347, episodic_return=811.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11413.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11414.0, episodic_return=439.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11348, episodic_return=432.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11349, episodic_return=430.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11386, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11415.0, episodic_return=860.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11387, episodic_return=419.0
+Agent 1 play result: finished_runs=11388, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11389, episodic_return=502.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11350, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11416.0, episodic_return=427.0
+Agent 0 play result: finished_runs=11351, episodic_return=847.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11352, episodic_return=432.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11417.0, episodic_return=468.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11390, episodic_return=425.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11391, episodic_return=441.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11353, episodic_return=860.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11392, episodic_return=462.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11354, episodic_return=453.0
+Agent 0 play result: finished_runs=11355, episodic_return=851.0
+Ensemble agent play result: finished_runs=11418.0, episodic_return=851.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11356, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11393, episodic_return=583.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11419.0, episodic_return=859.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11357, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11394, episodic_return=403.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11395, episodic_return=834.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11358, episodic_return=428.0
+Agent 0 play result: finished_runs=11359, episodic_return=411.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11420.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11421.0, episodic_return=846.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11360, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11396, episodic_return=431.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11361, episodic_return=467.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11362, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11397, episodic_return=785.0
+Ensemble agent play result: finished_runs=11422.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11363, episodic_return=420.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11398, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11399, episodic_return=435.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11400, episodic_return=425.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11423.0, episodic_return=495.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11424.0, episodic_return=442.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11364, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11401, episodic_return=466.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11365, episodic_return=432.0
+Ensemble agent play result: finished_runs=11425.0, episodic_return=435.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11366, episodic_return=849.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11402, episodic_return=475.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11367, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11403, episodic_return=404.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11426.0, episodic_return=857.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11427.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11368, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11404, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11428.0, episodic_return=482.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11369, episodic_return=528.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11405, episodic_return=428.0
+Agent 1 play result: finished_runs=11406, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11370, episodic_return=858.0
+Agent 0 play result: finished_runs=11371, episodic_return=452.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11372, episodic_return=820.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11429.0, episodic_return=415.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11373, episodic_return=640.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11407, episodic_return=419.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11430.0, episodic_return=418.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11431.0, episodic_return=428.0
+Agent 0 play result: finished_runs=11374, episodic_return=857.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11432.0, episodic_return=852.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11375, episodic_return=428.0
+Ensemble agent play result: finished_runs=11433.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11434.0, episodic_return=384.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11435.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11376, episodic_return=787.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11408, episodic_return=427.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11436.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11409, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11377, episodic_return=857.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11378, episodic_return=451.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11379, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11380, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11381, episodic_return=842.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11382, episodic_return=785.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11410, episodic_return=417.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11437.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11438.0, episodic_return=806.0
+Agent 0 play result: finished_runs=11383, episodic_return=415.0
+Agent 0 play result: finished_runs=11384, episodic_return=410.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11411, episodic_return=859.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11385, episodic_return=406.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11386, episodic_return=496.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11387, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11412, episodic_return=546.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11439.0, episodic_return=371.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11388, episodic_return=423.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11440.0, episodic_return=850.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11413, episodic_return=422.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11389, episodic_return=821.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11390, episodic_return=485.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11391, episodic_return=424.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11414, episodic_return=652.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11415, episodic_return=739.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11392, episodic_return=851.0
+Ensemble agent play result: finished_runs=11441.0, episodic_return=426.0
+Agent 1 play result: finished_runs=11416, episodic_return=493.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11393, episodic_return=501.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11394, episodic_return=431.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11442.0, episodic_return=707.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11395, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11396, episodic_return=431.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11443.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11397, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11398, episodic_return=793.0
+Agent 1 play result: finished_runs=11417, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11399, episodic_return=481.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11444.0, episodic_return=423.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11418, episodic_return=794.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11400, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11419, episodic_return=420.0
+Ensemble agent play result: finished_runs=11445.0, episodic_return=433.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11401, episodic_return=415.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11402, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11403, episodic_return=804.0
+Agent 1 play result: finished_runs=11420, episodic_return=499.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11446.0, episodic_return=822.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11421, episodic_return=385.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11422, episodic_return=447.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11447.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11404, episodic_return=425.0
+Agent 0 play result: finished_runs=11405, episodic_return=863.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11406, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11423, episodic_return=401.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11407, episodic_return=783.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11408, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11424, episodic_return=482.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11425, episodic_return=819.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11409, episodic_return=740.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11448.0, episodic_return=861.0
+Agent 1 play result: finished_runs=11426, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11410, episodic_return=438.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11411, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11412, episodic_return=449.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11413, episodic_return=848.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11427, episodic_return=426.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11414, episodic_return=456.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11449.0, episodic_return=426.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11450.0, episodic_return=853.0
+Agent 0 play result: finished_runs=11415, episodic_return=401.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11416, episodic_return=816.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11417, episodic_return=459.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11418, episodic_return=471.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11428, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11419, episodic_return=621.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11451.0, episodic_return=850.0
+Agent 1 play result: finished_runs=11429, episodic_return=862.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11430, episodic_return=424.0
+Agent 1 play result: finished_runs=11431, episodic_return=856.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11420, episodic_return=824.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11452.0, episodic_return=428.0
+Agent 0 play result: finished_runs=11421, episodic_return=864.0
+Agent 0 play result: finished_runs=11422, episodic_return=489.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11423, episodic_return=843.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11424, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11453.0, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11432, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11433, episodic_return=420.0
+Agent 0 play result: finished_runs=11425, episodic_return=789.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11434, episodic_return=798.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11426, episodic_return=786.0
+Agent 1 play result: finished_runs=11435, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11436, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11454.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11455.0, episodic_return=430.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11437, episodic_return=415.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11427, episodic_return=863.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11428, episodic_return=440.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11429, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11430, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11438, episodic_return=422.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11431, episodic_return=864.0
+Agent 1 play result: finished_runs=11439, episodic_return=857.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11440, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11441, episodic_return=437.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11432, episodic_return=503.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11433, episodic_return=452.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11442, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11434, episodic_return=818.0
+Ensemble agent play result: finished_runs=11456.0, episodic_return=862.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11443, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11435, episodic_return=857.0
+Agent 0 play result: finished_runs=11436, episodic_return=428.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11457.0, episodic_return=430.0
+Agent 1 play result: finished_runs=11444, episodic_return=842.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11437, episodic_return=418.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11445, episodic_return=439.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11446, episodic_return=427.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11447, episodic_return=762.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11448, episodic_return=789.0
+Agent 0 play result: finished_runs=11438, episodic_return=818.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11449, episodic_return=862.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11439, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11450, episodic_return=461.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11458.0, episodic_return=429.0
+Ensemble agent play result: finished_runs=11459.0, episodic_return=410.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11451, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11440, episodic_return=850.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11460.0, episodic_return=687.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11452, episodic_return=819.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11441, episodic_return=409.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11442, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11453, episodic_return=434.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11443, episodic_return=824.0
+Ensemble agent play result: finished_runs=11461.0, episodic_return=428.0
+Agent 0 play result: finished_runs=11444, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11445, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11462.0, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11454, episodic_return=462.0
+Ensemble agent play result: finished_runs=11463.0, episodic_return=846.0
+Agent 1 play result: finished_runs=11455, episodic_return=740.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11456, episodic_return=428.0
+Agent 0 play result: finished_runs=11446, episodic_return=484.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11457, episodic_return=423.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11447, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11458, episodic_return=816.0
+Agent 1 play result: finished_runs=11459, episodic_return=489.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11448, episodic_return=817.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11449, episodic_return=828.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11460, episodic_return=430.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11464.0, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11450, episodic_return=758.0
+Agent 1 play result: finished_runs=11461, episodic_return=460.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11462, episodic_return=431.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11451, episodic_return=447.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11452, episodic_return=427.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11465.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11463, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11466.0, episodic_return=859.0
+Agent 1 play result: finished_runs=11464, episodic_return=501.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11467.0, episodic_return=841.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11465, episodic_return=820.0
+Agent 1 play result: finished_runs=11466, episodic_return=844.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11453, episodic_return=434.0
+Ensemble agent play result: finished_runs=11468.0, episodic_return=846.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11467, episodic_return=316.0
+Agent 0 play result: finished_runs=11454, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11455, episodic_return=544.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11469.0, episodic_return=859.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11470.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11471.0, episodic_return=824.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11468, episodic_return=431.0
+Agent 1 play result: finished_runs=11469, episodic_return=428.0
+Ensemble agent play result: finished_runs=11472.0, episodic_return=816.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11456, episodic_return=403.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11470, episodic_return=423.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11471, episodic_return=859.0
+Ensemble agent play result: finished_runs=11473.0, episodic_return=839.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11457, episodic_return=801.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11474.0, episodic_return=430.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11458, episodic_return=841.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11459, episodic_return=439.0
+Agent 0 play result: finished_runs=11460, episodic_return=780.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11472, episodic_return=850.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11473, episodic_return=428.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11475.0, episodic_return=430.0
+Ensemble agent play result: finished_runs=11476.0, episodic_return=791.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11474, episodic_return=522.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11477.0, episodic_return=470.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11461, episodic_return=415.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11462, episodic_return=440.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11475, episodic_return=660.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11463, episodic_return=424.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11476, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11477, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11478.0, episodic_return=428.0
+Ensemble agent play result: finished_runs=11479.0, episodic_return=765.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11478, episodic_return=513.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11480.0, episodic_return=431.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11481.0, episodic_return=417.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11464, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11465, episodic_return=420.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11466, episodic_return=850.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11479, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11480, episodic_return=425.0
+Agent 0 play result: finished_runs=11467, episodic_return=417.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11481, episodic_return=382.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11482, episodic_return=858.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11483, episodic_return=394.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11468, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11482.0, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11484, episodic_return=799.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11483.0, episodic_return=419.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11469, episodic_return=396.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11470, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11484.0, episodic_return=438.0
+Agent 1 play result: finished_runs=11485, episodic_return=440.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11485.0, episodic_return=859.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11471, episodic_return=425.0
+Agent 1 play result: finished_runs=11486, episodic_return=420.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11487, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11488, episodic_return=417.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11472, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11489, episodic_return=427.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11473, episodic_return=466.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11474, episodic_return=401.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11490, episodic_return=850.0
+Ensemble agent play result: finished_runs=11486.0, episodic_return=409.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11491, episodic_return=431.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11492, episodic_return=394.0
+Ensemble agent play result: finished_runs=11487.0, episodic_return=496.0
+Agent 1 play result: finished_runs=11493, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11475, episodic_return=460.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11488.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11476, episodic_return=431.0
+Agent 0 play result: finished_runs=11477, episodic_return=854.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11478, episodic_return=417.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11489.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11490.0, episodic_return=363.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11491.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11494, episodic_return=395.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11492.0, episodic_return=431.0
+Agent 1 play result: finished_runs=11495, episodic_return=855.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11493.0, episodic_return=364.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11479, episodic_return=417.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11496, episodic_return=411.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11480, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11494.0, episodic_return=426.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11497, episodic_return=438.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11495.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11498, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11481, episodic_return=697.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11482, episodic_return=423.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11496.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11497.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11498.0, episodic_return=431.0
+Agent 0 play result: finished_runs=11483, episodic_return=843.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11499.0, episodic_return=408.0
+Agent 0 play result: finished_runs=11484, episodic_return=853.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11485, episodic_return=413.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11500.0, episodic_return=811.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11499, episodic_return=804.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11500, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11501, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11501.0, episodic_return=424.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11502.0, episodic_return=430.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11503.0, episodic_return=476.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11502, episodic_return=858.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11503, episodic_return=795.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11504.0, episodic_return=857.0
+Ensemble agent play result: finished_runs=11505.0, episodic_return=792.0
+Agent 0 play result: finished_runs=11486, episodic_return=847.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11506.0, episodic_return=406.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11487, episodic_return=556.0
+Agent 1 play result: finished_runs=11504, episodic_return=431.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11488, episodic_return=798.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11507.0, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11505, episodic_return=342.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11489, episodic_return=818.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11508.0, episodic_return=806.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11490, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11509.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11491, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11492, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11506, episodic_return=596.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11493, episodic_return=375.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11494, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11510.0, episodic_return=429.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11511.0, episodic_return=848.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11512.0, episodic_return=802.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11513.0, episodic_return=412.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11507, episodic_return=425.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11495, episodic_return=827.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11514.0, episodic_return=427.0
+Agent 0 play result: finished_runs=11496, episodic_return=812.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11508, episodic_return=858.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11515.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11516.0, episodic_return=858.0
+Agent 0 play result: finished_runs=11497, episodic_return=799.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11517.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11498, episodic_return=427.0
+Agent 0 play result: finished_runs=11499, episodic_return=403.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11509, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11510, episodic_return=392.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11500, episodic_return=863.0
+Agent 0 play result: finished_runs=11501, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11511, episodic_return=429.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11512, episodic_return=583.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11518.0, episodic_return=428.0
+Agent 0 play result: finished_runs=11502, episodic_return=419.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11513, episodic_return=791.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11514, episodic_return=440.0
+Agent 0 play result: finished_runs=11503, episodic_return=485.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11519.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11515, episodic_return=416.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11520.0, episodic_return=540.0
+Agent 0 play result: finished_runs=11504, episodic_return=842.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11521.0, episodic_return=817.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11522.0, episodic_return=862.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11516, episodic_return=513.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11523.0, episodic_return=421.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11524.0, episodic_return=420.0
+Ensemble agent play result: finished_runs=11525.0, episodic_return=857.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11505, episodic_return=809.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11506, episodic_return=854.0
+Agent 1 play result: finished_runs=11517, episodic_return=422.0
+Ensemble agent play result: finished_runs=11526.0, episodic_return=615.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11518, episodic_return=553.0
+Agent 0 play result: finished_runs=11507, episodic_return=782.0
+Agent 1 play result: finished_runs=11519, episodic_return=767.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11508, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11520, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11527.0, episodic_return=425.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11528.0, episodic_return=422.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11509, episodic_return=432.0
+Agent 0 play result: finished_runs=11510, episodic_return=430.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11521, episodic_return=667.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11522, episodic_return=401.0
+Agent 1 play result: finished_runs=11523, episodic_return=420.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11511, episodic_return=848.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11512, episodic_return=442.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11529.0, episodic_return=863.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11524, episodic_return=424.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11513, episodic_return=392.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11514, episodic_return=835.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11530.0, episodic_return=394.0
+Agent 0 play result: finished_runs=11515, episodic_return=653.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11531.0, episodic_return=419.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11516, episodic_return=424.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11525, episodic_return=397.0
+Agent 1 play result: finished_runs=11526, episodic_return=864.0
+Agent 1 play result: finished_runs=11527, episodic_return=460.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11528, episodic_return=431.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11529, episodic_return=430.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11532.0, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11533.0, episodic_return=417.0
+Ensemble agent play result: finished_runs=11534.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11517, episodic_return=447.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11530, episodic_return=390.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11535.0, episodic_return=435.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11518, episodic_return=847.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11536.0, episodic_return=852.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11519, episodic_return=511.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11520, episodic_return=418.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11537.0, episodic_return=424.0
+Ensemble agent play result: finished_runs=11538.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11531, episodic_return=428.0
+Ensemble agent play result: finished_runs=11539.0, episodic_return=434.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11540.0, episodic_return=454.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11532, episodic_return=860.0
+Agent 1 play result: finished_runs=11533, episodic_return=817.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11541.0, episodic_return=823.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11521, episodic_return=777.0
+Agent 0 play result: finished_runs=11522, episodic_return=858.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11534, episodic_return=788.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11523, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11542.0, episodic_return=800.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11535, episodic_return=789.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11524, episodic_return=418.0
+Agent 1 play result: finished_runs=11536, episodic_return=442.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11525, episodic_return=421.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11537, episodic_return=513.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11526, episodic_return=406.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11543.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11527, episodic_return=860.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11538, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11528, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11544.0, episodic_return=860.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11529, episodic_return=840.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11530, episodic_return=410.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11539, episodic_return=420.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11531, episodic_return=441.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11545.0, episodic_return=469.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11546.0, episodic_return=731.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11540, episodic_return=864.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11532, episodic_return=850.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11533, episodic_return=431.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11541, episodic_return=857.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11542, episodic_return=495.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11534, episodic_return=431.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11547.0, episodic_return=701.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11548.0, episodic_return=438.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11549.0, episodic_return=428.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11535, episodic_return=694.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11536, episodic_return=428.0
+Agent 1 play result: finished_runs=11543, episodic_return=855.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11537, episodic_return=846.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11544, episodic_return=655.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11545, episodic_return=428.0
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11550.0, episodic_return=844.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11546, episodic_return=796.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11551.0, episodic_return=456.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11538, episodic_return=862.0
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11547, episodic_return=423.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11552.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11553.0, episodic_return=552.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11548, episodic_return=465.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11539, episodic_return=853.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 1 play result: finished_runs=11549, episodic_return=497.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11540, episodic_return=844.0
+Agent 0 play result: finished_runs=11541, episodic_return=418.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Ensemble agent play result: finished_runs=11554.0, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11550, episodic_return=760.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11542, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11551, episodic_return=428.0
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11543, episodic_return=812.0
+Ensemble agent play result: finished_runs=11555.0, episodic_return=864.0
+SPS: 243
+SPS: 243
+SPS: 243
+SPS: 243
+Agent 0 play result: finished_runs=11544, episodic_return=468.0
+SPS: 243
+SPS: 243
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11556.0, episodic_return=853.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11545, episodic_return=436.0
+Ensemble agent play result: finished_runs=11557.0, episodic_return=421.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11552, episodic_return=863.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11553, episodic_return=424.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11558.0, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11546, episodic_return=838.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11559.0, episodic_return=810.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11547, episodic_return=465.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11548, episodic_return=423.0
+Agent 1 play result: finished_runs=11554, episodic_return=435.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11549, episodic_return=857.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11555, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11556, episodic_return=442.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11560.0, episodic_return=477.0
+Ensemble agent play result: finished_runs=11561.0, episodic_return=855.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11562.0, episodic_return=840.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11557, episodic_return=793.0
+Agent 1 play result: finished_runs=11558, episodic_return=862.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11550, episodic_return=423.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11551, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11559, episodic_return=364.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11563.0, episodic_return=417.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11560, episodic_return=781.0
+Agent 0 play result: finished_runs=11552, episodic_return=459.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11564.0, episodic_return=852.0
+Agent 1 play result: finished_runs=11561, episodic_return=436.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11553, episodic_return=513.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11554, episodic_return=431.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11562, episodic_return=449.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11565.0, episodic_return=856.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11566.0, episodic_return=423.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11555, episodic_return=860.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11567.0, episodic_return=846.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11563, episodic_return=421.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11564, episodic_return=825.0
+Agent 1 play result: finished_runs=11565, episodic_return=453.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11568.0, episodic_return=428.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11556, episodic_return=797.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11557, episodic_return=434.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11558, episodic_return=542.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11559, episodic_return=864.0
+Ensemble agent play result: finished_runs=11569.0, episodic_return=428.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11570.0, episodic_return=774.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11571.0, episodic_return=834.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11566, episodic_return=424.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11572.0, episodic_return=459.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11560, episodic_return=806.0
+Ensemble agent play result: finished_runs=11573.0, episodic_return=411.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11561, episodic_return=856.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11574.0, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11575.0, episodic_return=424.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11562, episodic_return=798.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11567, episodic_return=420.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11563, episodic_return=751.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11568, episodic_return=398.0
+Ensemble agent play result: finished_runs=11576.0, episodic_return=477.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11564, episodic_return=855.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11565, episodic_return=412.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11566, episodic_return=415.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11567, episodic_return=846.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11568, episodic_return=435.0
+Ensemble agent play result: finished_runs=11577.0, episodic_return=431.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11578.0, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11569, episodic_return=410.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11570, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11569, episodic_return=424.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11579.0, episodic_return=859.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11571, episodic_return=427.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11572, episodic_return=818.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11580.0, episodic_return=412.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11570, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11571, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11572, episodic_return=730.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11581.0, episodic_return=847.0
+Ensemble agent play result: finished_runs=11582.0, episodic_return=851.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11583.0, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11573, episodic_return=456.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11573, episodic_return=423.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11574, episodic_return=478.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11574, episodic_return=833.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11575, episodic_return=463.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11575, episodic_return=419.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11576, episodic_return=405.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11576, episodic_return=732.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11577, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11578, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11584.0, episodic_return=851.0
+Agent 1 play result: finished_runs=11577, episodic_return=758.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11585.0, episodic_return=428.0
+Agent 0 play result: finished_runs=11579, episodic_return=729.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11580, episodic_return=776.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11581, episodic_return=395.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11582, episodic_return=416.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11586.0, episodic_return=430.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11578, episodic_return=856.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11583, episodic_return=864.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11579, episodic_return=859.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11580, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11584, episodic_return=814.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11587.0, episodic_return=811.0
+Agent 0 play result: finished_runs=11585, episodic_return=478.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11581, episodic_return=432.0
+Agent 0 play result: finished_runs=11586, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11587, episodic_return=761.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11588.0, episodic_return=860.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11582, episodic_return=854.0
+Agent 0 play result: finished_runs=11588, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11589.0, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11583, episodic_return=413.0
+Ensemble agent play result: finished_runs=11590.0, episodic_return=806.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11584, episodic_return=427.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11589, episodic_return=819.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11590, episodic_return=723.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11591.0, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11585, episodic_return=863.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11592.0, episodic_return=417.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11593.0, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11586, episodic_return=861.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11594.0, episodic_return=762.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11591, episodic_return=828.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11595.0, episodic_return=435.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11587, episodic_return=847.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11588, episodic_return=819.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11592, episodic_return=856.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11593, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11589, episodic_return=768.0
+Ensemble agent play result: finished_runs=11596.0, episodic_return=846.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11597.0, episodic_return=836.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11590, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11591, episodic_return=418.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11598.0, episodic_return=432.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11594, episodic_return=775.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11595, episodic_return=427.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11599.0, episodic_return=431.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11592, episodic_return=857.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11596, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11597, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11600.0, episodic_return=739.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11593, episodic_return=428.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11594, episodic_return=474.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11598, episodic_return=444.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11599, episodic_return=800.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11601.0, episodic_return=859.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11602.0, episodic_return=858.0
+Agent 0 play result: finished_runs=11600, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11603.0, episodic_return=852.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11604.0, episodic_return=860.0
+Agent 0 play result: finished_runs=11601, episodic_return=860.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11595, episodic_return=405.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11605.0, episodic_return=416.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11602, episodic_return=430.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11596, episodic_return=840.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11606.0, episodic_return=424.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11607.0, episodic_return=335.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11608.0, episodic_return=420.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11609.0, episodic_return=485.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11610.0, episodic_return=862.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11597, episodic_return=818.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11603, episodic_return=477.0
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11604, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11605, episodic_return=812.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11598, episodic_return=503.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11599, episodic_return=402.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11611.0, episodic_return=470.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11612.0, episodic_return=418.0
+Ensemble agent play result: finished_runs=11613.0, episodic_return=577.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11606, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11614.0, episodic_return=806.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11615.0, episodic_return=149.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11607, episodic_return=849.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11608, episodic_return=838.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11600, episodic_return=700.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11616.0, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11609, episodic_return=812.0
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11617.0, episodic_return=700.0
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11601, episodic_return=431.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11618.0, episodic_return=821.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11619.0, episodic_return=859.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11610, episodic_return=402.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 0 play result: finished_runs=11611, episodic_return=849.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Agent 1 play result: finished_runs=11602, episodic_return=723.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+Ensemble agent play result: finished_runs=11620.0, episodic_return=864.0
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
+SPS: 244
