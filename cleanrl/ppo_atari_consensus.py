@@ -229,7 +229,7 @@ if __name__ == "__main__":
     rewards_list = []
     dones_list = []
     values_list = []
-
+    finished_frames_list = []
     finished_runs_list = []
     avg_return_list = []
     avg_length_list = []
@@ -269,10 +269,12 @@ if __name__ == "__main__":
         # TRY NOT TO MODIFY: variables necessary to record the game while starting the game
         
         finished_runs = 0
+        finished_frames = 0
         avg_return = 0.0
         avg_length = 0.0
         
         finished_runs_list.append(finished_runs)
+        finished_frames_list.append(finished_frames)
         avg_return_list.append(avg_return)
         avg_length_list.append(avg_length)
 
@@ -327,15 +329,19 @@ if __name__ == "__main__":
                 next_obs, reward, done, info = envs_list[i].step(action.cpu().numpy())
                 rewards_list[i][step] = torch.tensor(reward).to(device).view(-1)
                 next_obs_list[i], next_done_list[i] = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(device)
-
+                
                 for item in info:
+                    finished_frames_list[i] += 1
                     if "episode" in item.keys():
                         finished_runs_list[i] += 1
                         print(f"Agent {i} play result: finished_runs={finished_runs_list[i]}, episodic_return={item['episode']['r']}")
                         avg_return_list[i] = 0.9 * avg_return_list[i] + 0.1 * item["episode"]["r"]
                         avg_length_list[i] = 0.9 * avg_length_list[i] + 0.1 * item["episode"]["l"]
-                        writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_runs_list[i])
-                        writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
+                        # writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_runs_list[i])
+                        # writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
+                        writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_frames_list[i])
+                        writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_frames_list[i])
+
                         # break
             ######## introduce an ensemble agent to play the game ########
             if args.test_ensemble:

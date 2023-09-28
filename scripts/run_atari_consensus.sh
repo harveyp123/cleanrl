@@ -1,6 +1,6 @@
 
 
-export total_timesteps=20000000
+export total_timesteps=10000000
 mkdir -p ./log/consensus_total_timesteps_${total_timesteps}/
 
 # export n_agent=2
