@@ -186,16 +186,21 @@ if __name__ == "__main__":
     args = parse_args()
     run_name = f"{args.env_id}__alpha{args.alpha_values}__seed{args.seed}__{int(time.time())}"
     writer_list = []
+
+
+    #### number of update epochs
+    num_updates = args.total_timesteps // args.batch_size
+
     for i in range(args.num_agent):
         
-        writer = SummaryWriter(f"runs/{args.exp_name}/{run_name}/agent_{i}")
+        writer = SummaryWriter(f"runs/{args.exp_name}_total_time_{args.total_timesteps}/{run_name}/agent_{i}")
         writer.add_text(
             "hyperparameters",
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
         )
         writer_list.append(writer)
     if args.test_ensemble:
-        writer_ensemble = SummaryWriter(f"runs/{args.exp_name}/{run_name}/ensemble")
+        writer_ensemble = SummaryWriter(f"runs/{args.exp_name}_total_time_{args.total_timesteps}/{run_name}/ensemble")
         writer_ensemble.add_text(
             "hyperparameters",
             "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
@@ -208,8 +213,7 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
-    #### number of update epochs
-    num_updates = args.total_timesteps // args.batch_size
+
 
 
     # env setup
