@@ -61,9 +61,10 @@ def parse_args():
         help="the number of parallel game agent")
     parser.add_argument("--alpha-values", type=float, default=0,
         help="distillation strength")
-    parser.add_argument("--test-ensemble", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
+    parser.add_argument("--test-ensemble", type=lambda x: bool(strtobool(x)), default=False, nargs="?", const=True,
         help="Test the ensemble agent or not")
-
+    parser.add_argument("--smooth-return", type=lambda x: bool(strtobool(x)), default=False, nargs="?", const=True,
+        help="Smooth the return or not")
     parser.add_argument("--num-steps", type=int, default=128,
         help="the number of steps to run in each environment per policy rollout")
     parser.add_argument("--anneal-lr", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
@@ -301,6 +302,7 @@ if __name__ == "__main__":
         agent_ensemble = Agent_ensemble(agent_list)
         next_obs_ensemble = torch.Tensor(envs_ensemble.reset()).to(device)
         finished_runs_ensemble = 0.0
+        finished_frames_ensemble = 0.0
         avg_return_ensemble = 0.0
         avg_length_ensemble = 0.0
 
@@ -335,8 +337,12 @@ if __name__ == "__main__":
                     if "episode" in item.keys():
                         finished_runs_list[i] += 1
                         print(f"Agent {i} play result: finished_runs={finished_runs_list[i]}, episodic_return={item['episode']['r']}")
-                        avg_return_list[i] = 0.9 * avg_return_list[i] + 0.1 * item["episode"]["r"]
-                        avg_length_list[i] = 0.9 * avg_length_list[i] + 0.1 * item["episode"]["l"]
+                        if args.smooth_return:
+                            avg_return_list[i] = 0.9 * avg_return_list[i] + 0.1 * item["episode"]["r"]
+                            avg_length_list[i] = 0.9 * avg_length_list[i] + 0.1 * item["episode"]["l"]
+                        else:
+                            avg_return_list[i] = item["episode"]["r"]
+                            avg_length_list[i] = item["episode"]["l"]
                         # writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_runs_list[i])
                         # writer_list[i].add_scalar("charts/episodic_length", avg_length_list[i], finished_runs_list[i])
                         writer_list[i].add_scalar("charts/episodic_return", avg_return_list[i], finished_frames_list[i])
@@ -354,14 +360,21 @@ if __name__ == "__main__":
                 next_obs_ensemble= torch.Tensor(next_obs_ensemble).to(device)
 
                 for item in info:
+                    finished_frames_ensemble += 1
                     if "episode" in item.keys():
                         finished_runs_ensemble += 1
-                        avg_return_ensemble = 0.9 * avg_return_ensemble + 0.1 * item["episode"]["r"]
-                        avg_length_ensemble = 0.9 * avg_length_ensemble + 0.1 * item["episode"]["l"]
-
+                        if args.smooth_return:
+                            avg_return_ensemble = 0.9 * avg_return_ensemble + 0.1 * item["episode"]["r"]
+                            avg_length_ensemble = 0.9 * avg_length_ensemble + 0.1 * item["episode"]["l"]
+                        else: 
+                            avg_return_ensemble = item["episode"]["r"]
+                            avg_length_ensemble = item["episode"]["l"]
                         print(f"Ensemble agent play result: finished_runs={finished_runs_ensemble}, episodic_return={item['episode']['r']}")
-                        writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_runs_ensemble)
-                        writer_ensemble.add_scalar("charts/episodic_length", avg_return_ensemble, finished_runs_ensemble)
+                        # writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_runs_ensemble)
+                        # writer_ensemble.add_scalar("charts/episodic_length", avg_length_ensemble, finished_runs_ensemble)
+                        writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_frames_ensemble)
+                        writer_ensemble.add_scalar("charts/episodic_length", avg_length_ensemble, finished_frames_ensemble)
+                        
                         # break
 
 
@@ -563,3 +576,4 @@ if __name__ == "__main__":
     for i in range(args.num_agent):
         envs_list[i].close()
         writer_list[i].close()
+    print("Finished all runs")
