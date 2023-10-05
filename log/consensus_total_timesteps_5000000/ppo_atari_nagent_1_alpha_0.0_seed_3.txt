@@ -10831,3 +10831,406 @@ current alpha:  0.0
 2023-10-04 23:45:06 SPS: 359
 2023-10-04 23:45:08 SPS: 359
 2023-10-04 23:45:09  Agent 0 play result: finished_runs=6177, episodic_return=178.0
+2023-10-04 23:45:10  Agent 0 play result: finished_runs=6178, episodic_return=105.0
+2023-10-04 23:45:11 SPS: 359
+2023-10-04 23:45:14 SPS: 359
+2023-10-04 23:45:17 SPS: 359
+2023-10-04 23:45:18  Agent 0 play result: finished_runs=6179, episodic_return=183.0
+2023-10-04 23:45:20 SPS: 359
+2023-10-04 23:45:21  Agent 0 play result: finished_runs=6180, episodic_return=121.0
+2023-10-04 23:45:23 SPS: 359
+2023-10-04 23:45:24  Agent 0 play result: finished_runs=6181, episodic_return=103.0
+2023-10-04 23:45:25 SPS: 359
+2023-10-04 23:45:27  Agent 0 play result: finished_runs=6182, episodic_return=83.0
+2023-10-04 23:45:28 SPS: 359
+2023-10-04 23:45:31 SPS: 359
+2023-10-04 23:45:32  Agent 0 play result: finished_runs=6183, episodic_return=301.0
+2023-10-04 23:45:33 SPS: 359
+2023-10-04 23:45:36 SPS: 359
+2023-10-04 23:45:38 SPS: 359
+2023-10-04 23:45:39  Agent 0 play result: finished_runs=6184, episodic_return=222.0
+2023-10-04 23:45:40 SPS: 359
+2023-10-04 23:45:43 SPS: 359
+2023-10-04 23:45:43  Agent 0 play result: finished_runs=6185, episodic_return=92.0
+2023-10-04 23:45:46 SPS: 359
+2023-10-04 23:45:49  Agent 0 play result: finished_runs=6186, episodic_return=185.0
+2023-10-04 23:45:49 SPS: 359
+2023-10-04 23:45:52 SPS: 359
+2023-10-04 23:45:52  Agent 0 play result: finished_runs=6187, episodic_return=261.0
+2023-10-04 23:45:54  Agent 0 play result: finished_runs=6188, episodic_return=55.0
+2023-10-04 23:45:55 SPS: 359
+2023-10-04 23:45:55  Agent 0 play result: finished_runs=6189, episodic_return=172.0
+2023-10-04 23:45:57 SPS: 359
+2023-10-04 23:46:00  Agent 0 play result: finished_runs=6190, episodic_return=127.0
+2023-10-04 23:46:00 SPS: 359
+2023-10-04 23:46:01  Agent 0 play result: finished_runs=6191, episodic_return=105.0
+2023-10-04 23:46:03 SPS: 359
+2023-10-04 23:46:06 SPS: 359
+2023-10-04 23:46:09 SPS: 359
+2023-10-04 23:46:12 SPS: 359
+2023-10-04 23:46:12  Agent 0 play result: finished_runs=6192, episodic_return=92.0
+2023-10-04 23:46:15 SPS: 359
+2023-10-04 23:46:16  Agent 0 play result: finished_runs=6193, episodic_return=175.0
+2023-10-04 23:46:17  Agent 0 play result: finished_runs=6194, episodic_return=67.0
+2023-10-04 23:46:18 SPS: 359
+2023-10-04 23:46:20  Agent 0 play result: finished_runs=6195, episodic_return=109.0
+2023-10-04 23:46:21 SPS: 359
+2023-10-04 23:46:23  Agent 0 play result: finished_runs=6196, episodic_return=108.0
+2023-10-04 23:46:24 SPS: 359
+2023-10-04 23:46:27 SPS: 359
+2023-10-04 23:46:30 SPS: 359
+2023-10-04 23:46:30  Agent 0 play result: finished_runs=6197, episodic_return=145.0
+2023-10-04 23:46:31  Agent 0 play result: finished_runs=6198, episodic_return=173.0
+2023-10-04 23:46:33 SPS: 359
+2023-10-04 23:46:36 SPS: 359
+2023-10-04 23:46:36  Agent 0 play result: finished_runs=6199, episodic_return=178.0
+2023-10-04 23:46:39 SPS: 359
+2023-10-04 23:46:42 SPS: 359
+2023-10-04 23:46:44 SPS: 359
+2023-10-04 23:46:47 SPS: 359
+2023-10-04 23:46:49  Agent 0 play result: finished_runs=6200, episodic_return=132.0
+2023-10-04 23:46:49 SPS: 359
+2023-10-04 23:46:51 SPS: 359
+2023-10-04 23:46:51  Agent 0 play result: finished_runs=6201, episodic_return=125.0
+2023-10-04 23:46:52  Agent 0 play result: finished_runs=6202, episodic_return=158.0
+2023-10-04 23:46:53  Agent 0 play result: finished_runs=6203, episodic_return=183.0
+2023-10-04 23:46:53 SPS: 359
+2023-10-04 23:46:54  Agent 0 play result: finished_runs=6204, episodic_return=244.0
+2023-10-04 23:46:55 SPS: 359
+2023-10-04 23:46:58 SPS: 359
+2023-10-04 23:46:58  Agent 0 play result: finished_runs=6205, episodic_return=152.0
+2023-10-04 23:46:58  Agent 0 play result: finished_runs=6206, episodic_return=203.0
+2023-10-04 23:47:00  Agent 0 play result: finished_runs=6207, episodic_return=197.0
+2023-10-04 23:47:00 SPS: 359
+2023-10-04 23:47:03 SPS: 359
+2023-10-04 23:47:05  Agent 0 play result: finished_runs=6208, episodic_return=36.0
+2023-10-04 23:47:06 SPS: 359
+2023-10-04 23:47:08 SPS: 359
+2023-10-04 23:47:09  Agent 0 play result: finished_runs=6209, episodic_return=244.0
+2023-10-04 23:47:11 SPS: 359
+2023-10-04 23:47:14 SPS: 359
+2023-10-04 23:47:17 SPS: 359
+2023-10-04 23:47:20 SPS: 359
+2023-10-04 23:47:23 SPS: 359
+2023-10-04 23:47:24  Agent 0 play result: finished_runs=6210, episodic_return=133.0
+2023-10-04 23:47:26  Agent 0 play result: finished_runs=6211, episodic_return=123.0
+2023-10-04 23:47:26 SPS: 359
+2023-10-04 23:47:29  Agent 0 play result: finished_runs=6212, episodic_return=218.0
+2023-10-04 23:47:29  Agent 0 play result: finished_runs=6213, episodic_return=235.0
+2023-10-04 23:47:29 SPS: 359
+2023-10-04 23:47:33 SPS: 359
+2023-10-04 23:47:36 SPS: 359
+2023-10-04 23:47:37  Agent 0 play result: finished_runs=6214, episodic_return=191.0
+2023-10-04 23:47:38  Agent 0 play result: finished_runs=6215, episodic_return=157.0
+2023-10-04 23:47:39  Agent 0 play result: finished_runs=6216, episodic_return=123.0
+2023-10-04 23:47:40 SPS: 359
+2023-10-04 23:47:43 SPS: 359
+2023-10-04 23:47:46 SPS: 359
+2023-10-04 23:47:46  Agent 0 play result: finished_runs=6217, episodic_return=190.0
+2023-10-04 23:47:49 SPS: 359
+2023-10-04 23:47:51 SPS: 359
+2023-10-04 23:47:51  Agent 0 play result: finished_runs=6218, episodic_return=260.0
+2023-10-04 23:47:53 SPS: 359
+2023-10-04 23:47:53  Agent 0 play result: finished_runs=6219, episodic_return=160.0
+2023-10-04 23:47:56 SPS: 359
+2023-10-04 23:47:58 SPS: 359
+2023-10-04 23:48:00 SPS: 359
+2023-10-04 23:48:00  Agent 0 play result: finished_runs=6220, episodic_return=257.0
+2023-10-04 23:48:01  Agent 0 play result: finished_runs=6221, episodic_return=90.0
+2023-10-04 23:48:03 SPS: 359
+2023-10-04 23:48:04  Agent 0 play result: finished_runs=6222, episodic_return=204.0
+2023-10-04 23:48:05 SPS: 359
+2023-10-04 23:48:08 SPS: 359
+2023-10-04 23:48:11 SPS: 359
+2023-10-04 23:48:11  Agent 0 play result: finished_runs=6223, episodic_return=192.0
+2023-10-04 23:48:12  Agent 0 play result: finished_runs=6224, episodic_return=126.0
+2023-10-04 23:48:13 SPS: 359
+2023-10-04 23:48:17 SPS: 359
+2023-10-04 23:48:17  Agent 0 play result: finished_runs=6225, episodic_return=102.0
+2023-10-04 23:48:19 SPS: 359
+2023-10-04 23:48:19  Agent 0 play result: finished_runs=6226, episodic_return=88.0
+2023-10-04 23:48:22 SPS: 359
+2023-10-04 23:48:25 SPS: 359
+2023-10-04 23:48:27 SPS: 359
+2023-10-04 23:48:27  Agent 0 play result: finished_runs=6227, episodic_return=161.0
+2023-10-04 23:48:29 SPS: 359
+2023-10-04 23:48:32  Agent 0 play result: finished_runs=6228, episodic_return=216.0
+2023-10-04 23:48:32 SPS: 359
+2023-10-04 23:48:34  Agent 0 play result: finished_runs=6229, episodic_return=98.0
+2023-10-04 23:48:35 SPS: 359
+2023-10-04 23:48:35  Agent 0 play result: finished_runs=6230, episodic_return=163.0
+2023-10-04 23:48:37  Agent 0 play result: finished_runs=6231, episodic_return=167.0
+2023-10-04 23:48:38 SPS: 359
+2023-10-04 23:48:41 SPS: 359
+2023-10-04 23:48:43  Agent 0 play result: finished_runs=6232, episodic_return=146.0
+2023-10-04 23:48:44 SPS: 359
+2023-10-04 23:48:47 SPS: 359
+2023-10-04 23:48:50 SPS: 359
+2023-10-04 23:48:51  Agent 0 play result: finished_runs=6233, episodic_return=161.0
+2023-10-04 23:48:52 SPS: 359
+2023-10-04 23:48:55 SPS: 359
+2023-10-04 23:48:58  Agent 0 play result: finished_runs=6234, episodic_return=309.0
+2023-10-04 23:48:58 SPS: 359
+2023-10-04 23:49:01 SPS: 359
+2023-10-04 23:49:04 SPS: 359
+2023-10-04 23:49:04  Agent 0 play result: finished_runs=6235, episodic_return=85.0
+2023-10-04 23:49:05  Agent 0 play result: finished_runs=6236, episodic_return=145.0
+2023-10-04 23:49:06  Agent 0 play result: finished_runs=6237, episodic_return=149.0
+2023-10-04 23:49:06 SPS: 359
+2023-10-04 23:49:09 SPS: 359
+2023-10-04 23:49:10  Agent 0 play result: finished_runs=6238, episodic_return=201.0
+2023-10-04 23:49:11  Agent 0 play result: finished_runs=6239, episodic_return=121.0
+2023-10-04 23:49:11 SPS: 359
+2023-10-04 23:49:14 SPS: 359
+2023-10-04 23:49:15  Agent 0 play result: finished_runs=6240, episodic_return=120.0
+2023-10-04 23:49:17 SPS: 359
+2023-10-04 23:49:19 SPS: 359
+2023-10-04 23:49:22 SPS: 359
+2023-10-04 23:49:24  Agent 0 play result: finished_runs=6241, episodic_return=126.0
+2023-10-04 23:49:25 SPS: 359
+2023-10-04 23:49:25  Agent 0 play result: finished_runs=6242, episodic_return=168.0
+2023-10-04 23:49:28 SPS: 359
+2023-10-04 23:49:30 SPS: 359
+2023-10-04 23:49:32  Agent 0 play result: finished_runs=6243, episodic_return=171.0
+2023-10-04 23:49:33 SPS: 359
+2023-10-04 23:49:35 SPS: 359
+2023-10-04 23:49:36  Agent 0 play result: finished_runs=6244, episodic_return=107.0
+2023-10-04 23:49:37  Agent 0 play result: finished_runs=6245, episodic_return=210.0
+2023-10-04 23:49:37  Agent 0 play result: finished_runs=6246, episodic_return=167.0
+2023-10-04 23:49:38 SPS: 359
+2023-10-04 23:49:40 SPS: 359
+2023-10-04 23:49:42 SPS: 359
+2023-10-04 23:49:45 SPS: 359
+2023-10-04 23:49:46  Agent 0 play result: finished_runs=6247, episodic_return=204.0
+2023-10-04 23:49:47  Agent 0 play result: finished_runs=6248, episodic_return=263.0
+2023-10-04 23:49:48 SPS: 359
+2023-10-04 23:49:51 SPS: 359
+2023-10-04 23:49:53 SPS: 359
+2023-10-04 23:49:54  Agent 0 play result: finished_runs=6249, episodic_return=113.0
+2023-10-04 23:49:56 SPS: 359
+2023-10-04 23:49:59 SPS: 359
+2023-10-04 23:50:00  Agent 0 play result: finished_runs=6250, episodic_return=181.0
+2023-10-04 23:50:02 SPS: 359
+2023-10-04 23:50:04  Agent 0 play result: finished_runs=6251, episodic_return=107.0
+2023-10-04 23:50:05 SPS: 359
+2023-10-04 23:50:07 SPS: 359
+2023-10-04 23:50:08  Agent 0 play result: finished_runs=6252, episodic_return=202.0
+2023-10-04 23:50:09  Agent 0 play result: finished_runs=6253, episodic_return=248.0
+2023-10-04 23:50:10 SPS: 359
+2023-10-04 23:50:13 SPS: 359
+2023-10-04 23:50:14  Agent 0 play result: finished_runs=6254, episodic_return=140.0
+2023-10-04 23:50:16 SPS: 359
+2023-10-04 23:50:19 SPS: 359
+2023-10-04 23:50:21  Agent 0 play result: finished_runs=6255, episodic_return=289.0
+2023-10-04 23:50:21  Agent 0 play result: finished_runs=6256, episodic_return=217.0
+2023-10-04 23:50:22 SPS: 359
+2023-10-04 23:50:22  Agent 0 play result: finished_runs=6257, episodic_return=39.0
+2023-10-04 23:50:24 SPS: 359
+2023-10-04 23:50:27 SPS: 359
+2023-10-04 23:50:30 SPS: 359
+2023-10-04 23:50:32  Agent 0 play result: finished_runs=6258, episodic_return=238.0
+2023-10-04 23:50:32  Agent 0 play result: finished_runs=6259, episodic_return=253.0
+2023-10-04 23:50:33 SPS: 359
+2023-10-04 23:50:35 SPS: 359
+2023-10-04 23:50:38 SPS: 359
+2023-10-04 23:50:41 SPS: 359
+2023-10-04 23:50:41  Agent 0 play result: finished_runs=6260, episodic_return=204.0
+2023-10-04 23:50:42  Agent 0 play result: finished_runs=6261, episodic_return=210.0
+2023-10-04 23:50:43 SPS: 359
+2023-10-04 23:50:44  Agent 0 play result: finished_runs=6262, episodic_return=59.0
+2023-10-04 23:50:46 SPS: 359
+2023-10-04 23:50:49 SPS: 359
+2023-10-04 23:50:52 SPS: 359
+2023-10-04 23:50:55 SPS: 359
+2023-10-04 23:50:57 SPS: 359
+2023-10-04 23:51:00  Agent 0 play result: finished_runs=6263, episodic_return=139.0
+2023-10-04 23:51:00 SPS: 359
+2023-10-04 23:51:00  Agent 0 play result: finished_runs=6264, episodic_return=168.0
+2023-10-04 23:51:02  Agent 0 play result: finished_runs=6265, episodic_return=115.0
+2023-10-04 23:51:03 SPS: 359
+2023-10-04 23:51:06 SPS: 359
+2023-10-04 23:51:06  Agent 0 play result: finished_runs=6266, episodic_return=299.0
+2023-10-04 23:51:06  Agent 0 play result: finished_runs=6267, episodic_return=141.0
+2023-10-04 23:51:09 SPS: 359
+2023-10-04 23:51:09  Agent 0 play result: finished_runs=6268, episodic_return=257.0
+2023-10-04 23:51:11  Agent 0 play result: finished_runs=6269, episodic_return=108.0
+2023-10-04 23:51:12 SPS: 359
+2023-10-04 23:51:14 SPS: 359
+2023-10-04 23:51:17 SPS: 359
+2023-10-04 23:51:20 SPS: 359
+2023-10-04 23:51:22 SPS: 359
+2023-10-04 23:51:24  Agent 0 play result: finished_runs=6270, episodic_return=163.0
+2023-10-04 23:51:25 SPS: 359
+2023-10-04 23:51:26  Agent 0 play result: finished_runs=6271, episodic_return=250.0
+2023-10-04 23:51:27  Agent 0 play result: finished_runs=6272, episodic_return=88.0
+2023-10-04 23:51:28 SPS: 359
+2023-10-04 23:51:30 SPS: 359
+2023-10-04 23:51:33 SPS: 359
+2023-10-04 23:51:33  Agent 0 play result: finished_runs=6273, episodic_return=120.0
+2023-10-04 23:51:36 SPS: 359
+2023-10-04 23:51:36  Agent 0 play result: finished_runs=6274, episodic_return=212.0
+2023-10-04 23:51:39  Agent 0 play result: finished_runs=6275, episodic_return=176.0
+2023-10-04 23:51:40 SPS: 359
+2023-10-04 23:51:42  Agent 0 play result: finished_runs=6276, episodic_return=133.0
+2023-10-04 23:51:43 SPS: 359
+2023-10-04 23:51:44  Agent 0 play result: finished_runs=6277, episodic_return=103.0
+2023-10-04 23:51:45 SPS: 359
+2023-10-04 23:51:49 SPS: 359
+2023-10-04 23:51:52 SPS: 359
+2023-10-04 23:51:55 SPS: 359
+2023-10-04 23:51:57  Agent 0 play result: finished_runs=6278, episodic_return=209.0
+2023-10-04 23:51:58 SPS: 359
+2023-10-04 23:52:01 SPS: 359
+2023-10-04 23:52:03  Agent 0 play result: finished_runs=6279, episodic_return=105.0
+2023-10-04 23:52:04 SPS: 359
+2023-10-04 23:52:05  Agent 0 play result: finished_runs=6280, episodic_return=71.0
+2023-10-04 23:52:07  Agent 0 play result: finished_runs=6281, episodic_return=262.0
+2023-10-04 23:52:08 SPS: 359
+2023-10-04 23:52:08  Agent 0 play result: finished_runs=6282, episodic_return=127.0
+2023-10-04 23:52:11 SPS: 359
+2023-10-04 23:52:14 SPS: 359
+2023-10-04 23:52:16  Agent 0 play result: finished_runs=6283, episodic_return=153.0
+2023-10-04 23:52:17  Agent 0 play result: finished_runs=6284, episodic_return=247.0
+2023-10-04 23:52:17 SPS: 359
+2023-10-04 23:52:19  Agent 0 play result: finished_runs=6285, episodic_return=85.0
+2023-10-04 23:52:20 SPS: 359
+2023-10-04 23:52:23 SPS: 359
+2023-10-04 23:52:26 SPS: 359
+2023-10-04 23:52:29 SPS: 359
+2023-10-04 23:52:32 SPS: 359
+2023-10-04 23:52:32  Agent 0 play result: finished_runs=6286, episodic_return=132.0
+2023-10-04 23:52:33  Agent 0 play result: finished_runs=6287, episodic_return=213.0
+2023-10-04 23:52:35 SPS: 359
+2023-10-04 23:52:37  Agent 0 play result: finished_runs=6288, episodic_return=107.0
+2023-10-04 23:52:38 SPS: 359
+2023-10-04 23:52:41 SPS: 359
+2023-10-04 23:52:44 SPS: 359
+2023-10-04 23:52:45  Agent 0 play result: finished_runs=6289, episodic_return=124.0
+2023-10-04 23:52:46  Agent 0 play result: finished_runs=6290, episodic_return=145.0
+2023-10-04 23:52:47 SPS: 359
+2023-10-04 23:52:50  Agent 0 play result: finished_runs=6291, episodic_return=97.0
+2023-10-04 23:52:50 SPS: 359
+2023-10-04 23:52:53 SPS: 359
+2023-10-04 23:52:54  Agent 0 play result: finished_runs=6292, episodic_return=127.0
+2023-10-04 23:52:56 SPS: 359
+2023-10-04 23:52:58 SPS: 359
+2023-10-04 23:53:01 SPS: 359
+2023-10-04 23:53:03  Agent 0 play result: finished_runs=6293, episodic_return=224.0
+2023-10-04 23:53:03  Agent 0 play result: finished_runs=6294, episodic_return=112.0
+2023-10-04 23:53:04 SPS: 359
+2023-10-04 23:53:08 SPS: 359
+2023-10-04 23:53:10 SPS: 359
+2023-10-04 23:53:10  Agent 0 play result: finished_runs=6295, episodic_return=81.0
+2023-10-04 23:53:13 SPS: 359
+2023-10-04 23:53:15  Agent 0 play result: finished_runs=6296, episodic_return=58.0
+2023-10-04 23:53:15 SPS: 359
+2023-10-04 23:53:16  Agent 0 play result: finished_runs=6297, episodic_return=262.0
+2023-10-04 23:53:17  Agent 0 play result: finished_runs=6298, episodic_return=123.0
+2023-10-04 23:53:17 SPS: 359
+2023-10-04 23:53:20 SPS: 359
+2023-10-04 23:53:22 SPS: 359
+2023-10-04 23:53:24  Agent 0 play result: finished_runs=6299, episodic_return=272.0
+2023-10-04 23:53:25 SPS: 359
+2023-10-04 23:53:28 SPS: 359
+2023-10-04 23:53:30  Agent 0 play result: finished_runs=6300, episodic_return=176.0
+2023-10-04 23:53:31 SPS: 359
+2023-10-04 23:53:33  Agent 0 play result: finished_runs=6301, episodic_return=188.0
+2023-10-04 23:53:33  Agent 0 play result: finished_runs=6302, episodic_return=83.0
+2023-10-04 23:53:34 SPS: 359
+2023-10-04 23:53:36  Agent 0 play result: finished_runs=6303, episodic_return=136.0
+2023-10-04 23:53:36 SPS: 359
+2023-10-04 23:53:39 SPS: 359
+2023-10-04 23:53:42 SPS: 359
+2023-10-04 23:53:44  Agent 0 play result: finished_runs=6304, episodic_return=207.0
+2023-10-04 23:53:45 SPS: 359
+2023-10-04 23:53:48 SPS: 359
+2023-10-04 23:53:51 SPS: 359
+2023-10-04 23:53:51  Agent 0 play result: finished_runs=6305, episodic_return=147.0
+2023-10-04 23:53:52  Agent 0 play result: finished_runs=6306, episodic_return=169.0
+2023-10-04 23:53:53 SPS: 359
+2023-10-04 23:53:55 SPS: 359
+2023-10-04 23:53:56  Agent 0 play result: finished_runs=6307, episodic_return=238.0
+2023-10-04 23:53:56  Agent 0 play result: finished_runs=6308, episodic_return=51.0
+2023-10-04 23:53:57 SPS: 359
+2023-10-04 23:54:00 SPS: 359
+2023-10-04 23:54:00  Agent 0 play result: finished_runs=6309, episodic_return=236.0
+2023-10-04 23:54:02 SPS: 359
+2023-10-04 23:54:03  Agent 0 play result: finished_runs=6310, episodic_return=96.0
+2023-10-04 23:54:05 SPS: 359
+2023-10-04 23:54:08 SPS: 359
+2023-10-04 23:54:09  Agent 0 play result: finished_runs=6311, episodic_return=275.0
+2023-10-04 23:54:10 SPS: 359
+2023-10-04 23:54:12 SPS: 360
+2023-10-04 23:54:14 SPS: 360
+2023-10-04 23:54:15  Agent 0 play result: finished_runs=6312, episodic_return=85.0
+2023-10-04 23:54:16 SPS: 360
+2023-10-04 23:54:17  Agent 0 play result: finished_runs=6313, episodic_return=264.0
+2023-10-04 23:54:19 SPS: 360
+2023-10-04 23:54:20  Agent 0 play result: finished_runs=6314, episodic_return=57.0
+2023-10-04 23:54:21  Agent 0 play result: finished_runs=6315, episodic_return=110.0
+2023-10-04 23:54:22 SPS: 360
+2023-10-04 23:54:24 SPS: 360
+2023-10-04 23:54:27  Agent 0 play result: finished_runs=6316, episodic_return=245.0
+2023-10-04 23:54:27 SPS: 360
+2023-10-04 23:54:29  Agent 0 play result: finished_runs=6317, episodic_return=179.0
+2023-10-04 23:54:31 SPS: 360
+2023-10-04 23:54:33 SPS: 360
+2023-10-04 23:54:34  Agent 0 play result: finished_runs=6318, episodic_return=211.0
+2023-10-04 23:54:36 SPS: 360
+2023-10-04 23:54:39 SPS: 360
+2023-10-04 23:54:40  Agent 0 play result: finished_runs=6319, episodic_return=227.0
+2023-10-04 23:54:41 SPS: 360
+2023-10-04 23:54:44 SPS: 360
+2023-10-04 23:54:47  Agent 0 play result: finished_runs=6320, episodic_return=145.0
+2023-10-04 23:54:47 SPS: 360
+2023-10-04 23:54:48  Agent 0 play result: finished_runs=6321, episodic_return=216.0
+2023-10-04 23:54:50 SPS: 360
+2023-10-04 23:54:53 SPS: 360
+2023-10-04 23:54:53  Agent 0 play result: finished_runs=6322, episodic_return=250.0
+2023-10-04 23:54:56 SPS: 360
+2023-10-04 23:54:59  Agent 0 play result: finished_runs=6323, episodic_return=143.0
+2023-10-04 23:55:00 SPS: 360
+2023-10-04 23:55:01  Agent 0 play result: finished_runs=6324, episodic_return=170.0
+2023-10-04 23:55:02 SPS: 360
+2023-10-04 23:55:04  Agent 0 play result: finished_runs=6325, episodic_return=228.0
+2023-10-04 23:55:05 SPS: 360
+2023-10-04 23:55:08 SPS: 360
+2023-10-04 23:55:08  Agent 0 play result: finished_runs=6326, episodic_return=154.0
+2023-10-04 23:55:11 SPS: 360
+2023-10-04 23:55:13  Agent 0 play result: finished_runs=6327, episodic_return=275.0
+2023-10-04 23:55:14 SPS: 360
+2023-10-04 23:55:17 SPS: 360
+2023-10-04 23:55:18  Agent 0 play result: finished_runs=6328, episodic_return=181.0
+2023-10-04 23:55:20 SPS: 360
+2023-10-04 23:55:23  Agent 0 play result: finished_runs=6329, episodic_return=210.0
+2023-10-04 23:55:23 SPS: 359
+2023-10-04 23:55:27 SPS: 359
+2023-10-04 23:55:29  Agent 0 play result: finished_runs=6330, episodic_return=64.0
+2023-10-04 23:55:29 SPS: 359
+2023-10-04 23:55:31  Agent 0 play result: finished_runs=6331, episodic_return=189.0
+2023-10-04 23:55:32 SPS: 359
+2023-10-04 23:55:33  Agent 0 play result: finished_runs=6332, episodic_return=112.0
+2023-10-04 23:55:35  Agent 0 play result: finished_runs=6333, episodic_return=112.0
+2023-10-04 23:55:35 SPS: 359
+2023-10-04 23:55:38 SPS: 359
+2023-10-04 23:55:41 SPS: 359
+2023-10-04 23:55:44 SPS: 359
+2023-10-04 23:55:44  Agent 0 play result: finished_runs=6334, episodic_return=48.0
+2023-10-04 23:55:47 SPS: 359
+2023-10-04 23:55:48  Agent 0 play result: finished_runs=6335, episodic_return=42.0
+2023-10-04 23:55:48  Agent 0 play result: finished_runs=6336, episodic_return=145.0
+2023-10-04 23:55:49  Agent 0 play result: finished_runs=6337, episodic_return=127.0
+2023-10-04 23:55:50 SPS: 359
+2023-10-04 23:55:53 SPS: 359
+2023-10-04 23:55:56 SPS: 359
+2023-10-04 23:55:58  Agent 0 play result: finished_runs=6338, episodic_return=244.0
+2023-10-04 23:55:59 SPS: 359
+2023-10-04 23:56:02 SPS: 359
+2023-10-04 23:56:02  Agent 0 play result: finished_runs=6339, episodic_return=110.0
+2023-10-04 23:56:05 SPS: 359
+2023-10-04 23:56:05  Agent 0 play result: finished_runs=6340, episodic_return=129.0
+2023-10-04 23:56:08 SPS: 359
+2023-10-04 23:56:10 SPS: 359
+2023-10-04 23:56:13  Agent 0 play result: finished_runs=6341, episodic_return=156.0
+2023-10-04 23:56:13 SPS: 359
+2023-10-04 23:56:13 Finished all runs
