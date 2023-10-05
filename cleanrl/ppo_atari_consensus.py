@@ -336,7 +336,7 @@ if __name__ == "__main__":
                     finished_frames_list[i] += 1
                     if "episode" in item.keys():
                         finished_runs_list[i] += 1
-                        print(f"Agent {i} play result: finished_runs={finished_runs_list[i]}, episodic_return={item['episode']['r']}")
+                        print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), f" Agent {i} play result: finished_runs={finished_runs_list[i]}, episodic_return={item['episode']['r']}")
                         if args.smooth_return:
                             avg_return_list[i] = 0.9 * avg_return_list[i] + 0.1 * item["episode"]["r"]
                             avg_length_list[i] = 0.9 * avg_length_list[i] + 0.1 * item["episode"]["l"]
@@ -369,7 +369,7 @@ if __name__ == "__main__":
                         else: 
                             avg_return_ensemble = item["episode"]["r"]
                             avg_length_ensemble = item["episode"]["l"]
-                        print(f"Ensemble agent play result: finished_runs={finished_runs_ensemble}, episodic_return={item['episode']['r']}")
+                        print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), f"Ensemble agent play result: finished_runs={finished_runs_ensemble}, episodic_return={item['episode']['r']}")
                         # writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_runs_ensemble)
                         # writer_ensemble.add_scalar("charts/episodic_length", avg_length_ensemble, finished_runs_ensemble)
                         writer_ensemble.add_scalar("charts/episodic_return", avg_return_ensemble, finished_frames_ensemble)
@@ -557,7 +557,7 @@ if __name__ == "__main__":
             writer_list[i].add_scalar("losses/approx_kl", approx_kl_list[i].item(), global_step)
             writer_list[i].add_scalar("losses/clipfrac", np.mean(clipfracs_list[i]), global_step)
             writer_list[i].add_scalar("losses/explained_variance", explained_var, global_step)
-            print("SPS:", int(global_step / (time.time() - start_time)))
+            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "SPS:", int(global_step / (time.time() - start_time)))
             writer_list[i].add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
         # Annealing the rate if instructed to do so.
 
@@ -576,4 +576,4 @@ if __name__ == "__main__":
     for i in range(args.num_agent):
         envs_list[i].close()
         writer_list[i].close()
-    print("Finished all runs")
+    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "Finished all runs")
