@@ -19,7 +19,7 @@ for i in ${!gpu_list[@]};do
     distill_timesteps=${distill_timesteps_list[i]}
     gpu=${gpu_list[i]}
     experiment_name=nonsymmetrized_${prefix}_total${total_timesteps}_T${T}_aplha${alpha}_student_alpha${student_alpha}_detach${detach}_distill_steps${distill_timesteps}_student_steps${student_timesteps}_gpu${gpu}
-    folder_name=logs/unequal_restart
+    folder_name=logs/two_agent
     if [ ! -d ${folder_name} ]; then
         mkdir -p ${folder_name}
     fi

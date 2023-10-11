@@ -2,12 +2,12 @@
 
 models_num=2
 detach=1
-total_timesteps_list=(1000000)
+total_timesteps_list=(10000000)
 T_list=(1 1 1 1)
 alpha_list=(1 1 1 1)
 student_alpha_list=(1 1 1 1)
 student_timesteps_list=(0 5000000 5000000 5000000 5000000)
-distill_timesteps_list=(1000000 2000000 2000000 2000000 2000000)
+distill_timesteps_list=(10000000 2000000 2000000 2000000 2000000)
 gpu_list=(0)
 prefix='1.debug'
 for i in ${!gpu_list[@]};do
