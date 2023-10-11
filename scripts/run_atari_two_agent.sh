@@ -24,7 +24,7 @@ for i in ${!gpu_list[@]};do
         mkdir -p ${folder_name}
     fi
     log_filename=${folder_name}/${experiment_name}.log
-    nohup python -u cleanrl/ppo_atari_unequal_restart.py \
+    nohup python -u cleanrl/ppo_atari_two_agent.py \
     --exp-name ${experiment_name} \
     --total-timesteps ${total_timesteps} \
     --T ${T} \
