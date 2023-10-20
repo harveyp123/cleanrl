@@ -15,6 +15,7 @@ from torch.utils.tensorboard import SummaryWriter
 import torch.nn.functional as F
 import ensemble_consensus_util as esb_util
 import wandb
+import json
 
 from stable_baselines3.common.atari_wrappers import (  # isort:skip
     ClipRewardEnv,
@@ -208,6 +209,7 @@ def kl_div_logits(p, q, T):
 
 if __name__ == "__main__":
     args = parse_args()
+    print(json.dumps(vars(args), indent=4))
     run_name = f"{args.env_id}__alpha{args.alpha_values}__seed{args.seed}__{int(time.time())}"
     wandb.login(key='ca2f2a2ae6e84e31bbc09a8f35f9b9a534dfbe9b')
     wandb.init(project='ensemble_distill_unequal_restart_atari', entity='jincan333', name=args.exp_name)

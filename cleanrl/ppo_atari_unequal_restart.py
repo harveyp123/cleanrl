@@ -15,6 +15,8 @@ from torch.utils.tensorboard import SummaryWriter
 import torch.nn.functional as F
 import ensemble_consensus_util as esb_util
 import wandb
+import json
+from collections import deque
 
 from stable_baselines3.common.atari_wrappers import (  # isort:skip
     ClipRewardEnv,
@@ -57,6 +59,13 @@ def parse_args():
     parser.add_argument("--student-alpha", type=float, default=1,
         help="student kl loss alpha")
     parser.add_argument('--gpu', type=int, default=0)
+    parser.add_argument('--obs-num', type=int, default=100)
+    parser.add_argument('--teacher-scheduler', type=str, default='cosine', choices=['cosine', 'multistep'])
+    parser.add_argument('--decreasing-step', type=list, default=[0.2, 0.4, 0.8])
+    parser.add_argument('--student-lr', type=float, default=0.00025)
+    parser.add_argument('--save', type=str, default='test')
+    parser.add_argument('--student-weight-decay', type=float, default=0.0001)
+    parser.add_argument('--threshold', type=float, default=0.4)
 
     parser.add_argument("--env-id", type=str, default="BreakoutNoFrameskip-v4",
         help="the id of the environment")
@@ -74,7 +83,7 @@ def parse_args():
         help="distillation strength")
     parser.add_argument("--test-ensemble", type=lambda x: bool(strtobool(x)), default=False, nargs="?", const=True,
         help="Test the ensemble agent or not")
-    parser.add_argument("--smooth-return", type=lambda x: bool(strtobool(x)), default=False, nargs="?", const=True,
+    parser.add_argument("--smooth-return", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
         help="Smooth the return or not")
     parser.add_argument("--num-steps", type=int, default=128,
         help="the number of steps to run in each environment per policy rollout")
@@ -208,13 +217,19 @@ def kl_div_logits(p, q, T):
 
 if __name__ == "__main__":
     args = parse_args()
+    print(json.dumps(vars(args), indent=4))
     run_name = f"{args.env_id}__alpha{args.alpha_values}__seed{args.seed}__{int(time.time())}"
     wandb.login(key='ca2f2a2ae6e84e31bbc09a8f35f9b9a534dfbe9b')
     wandb.init(project='ensemble_distill_unequal_restart_atari', entity='jincan333', name=args.exp_name)
+    wandb.define_metric('student_step')
+    wandb.define_metric("student kl loss", step_metric="student_step")
+    wandb.define_metric("student lr", step_metric="student_step")
     #### number of update epochs
     num_updates = args.total_timesteps // args.batch_size
-    student_updates = (args.student_timesteps + args.distill_timesteps) // args.batch_size
+    student_updates = args.student_timesteps // args.batch_size
     distill_updates = args.distill_timesteps // args.batch_size
+    print(f'total updates: {num_updates}   distill updates: {distill_updates}   student updates: {student_updates}')
+    obs_cache = deque(maxlen=args.obs_num)
 
     # TRY NOT TO MODIFY: seeding
     set_seed(args.seed)
@@ -225,16 +240,17 @@ if __name__ == "__main__":
     teacher_envs = gym.vector.SyncVectorEnv(
             [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
         )
-    student_envs = gym.vector.SyncVectorEnv(
-            [make_env(args.env_id, args.seed + i, i, args.capture_video, run_name) for i in range(args.num_envs)]
-        )
     assert isinstance(teacher_envs.single_action_space, gym.spaces.Discrete), "only discrete action space is supported"
-    teacher_agent, student_agent = Agent(teacher_envs).to(device), Agent(student_envs).to(device)
+    # student use teacher env
+    teacher_agent, student_agent = Agent(teacher_envs).to(device), Agent(teacher_envs).to(device)
     teacher_optimizer = optim.Adam(teacher_agent.parameters(), lr=args.learning_rate, eps=1e-5)
-    student_optimizer = optim.Adam(student_agent.parameters(), lr=args.learning_rate, eps=1e-5)
-    teacher_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = teacher_optimizer, T_max = num_updates, 
+    student_optimizer = optim.Adam(student_agent.parameters(), lr=args.student_lr, eps=1e-5, weight_decay=args.student_weight_decay)
+    if args.teacher_scheduler == 'cosine':
+        teacher_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = teacher_optimizer, T_max = num_updates, 
                         eta_min = args.learning_rate_min)
-    student_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = student_optimizer, T_max = student_updates, 
+    else:
+        teacher_scheduler = torch.optim.lr_scheduler.MultiStepLR(teacher_optimizer, milestones=[int(num_updates * _) for _ in args.decreasing_step], gamma=0.5)
+    student_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = student_optimizer, T_max = num_updates, 
                         eta_min = args.learning_rate_min)
 
     # ALGO Logic: Storage setup
@@ -245,13 +261,6 @@ if __name__ == "__main__":
     teacher_dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
     teacher_values = torch.zeros((args.num_steps, args.num_envs)).to(device)
 
-    student_obs = torch.zeros((args.num_steps, args.num_envs) + student_envs.single_observation_space.shape).to(device)
-    student_actions = torch.zeros((args.num_steps, args.num_envs) + student_envs.single_action_space.shape).to(device)
-    student_logprobs = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    student_rewards = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    student_dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    student_values = torch.zeros((args.num_steps, args.num_envs)).to(device)
-
     # TRY NOT TO MODIFY: variables necessary to record the game while starting the game
     teacher_finished_runs = 0
     teacher_finished_frames = 0
@@ -260,42 +269,59 @@ if __name__ == "__main__":
     teacher_next_obs = torch.Tensor(teacher_envs.reset()).to(device)
     teacher_next_done = torch.zeros(args.num_envs).to(device)
 
-    student_finished_runs = 0
-    student_finished_frames = 0
-    student_avg_return = 0.0
-    student_avg_length = 0.0
-    student_next_obs = torch.Tensor(student_envs.reset()).to(device)
-    student_next_done = torch.zeros(args.num_envs).to(device)
-
-
-    global_step = 0        
+    teacher_step = 0
+    student_step = 0
+    teacher_alpha = 0
     start_time = time.time()
     for update in range(1, num_updates + 1):
         # student retrain
-        if update % distill_updates == 0 and update != num_updates:
-            for step in range(0, args.num_steps):
-                global_step += 1 * args.num_envs
+        if update >= args.threshold*num_updates and update % distill_updates == 0 and update <= num_updates-100:
+            teacher_alpha = args.alpha
+            set_seed(update)
+            del student_agent
+            student_agent = Agent(teacher_envs).to(device)
+            student_optimizer = optim.Adam(student_agent.parameters(), lr=args.student_lr, eps=1e-5, weight_decay=args.student_weight_decay)
+            student_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = student_optimizer, T_max = student_updates+distill_updates, 
+                        eta_min = args.learning_rate_min)
+            for e in range(student_updates):
+                teacher_b_obs = obs_cache[e % args.obs_num]
+                for epoch in range(args.update_epochs):
+                    np.random.shuffle(teacher_b_inds)
+                    for start in range(0, args.batch_size, args.minibatch_size):
+                        end = start + args.minibatch_size
+                        teacher_mb_inds = teacher_b_inds[start:end]
+                        _, _, _, _, teacher_logits = teacher_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
+                        _, _, _, _, student_logits = student_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
+                        if args.detach:
+                            student_loss = kl_div_logits(student_logits, teacher_logits.detach(), args.T)
+                        else:
+                            student_loss = kl_div_logits(student_logits, teacher_logits, args.T)
+                        ##### Compute gradient
+                        student_optimizer.zero_grad()
+                        student_loss.backward()
+                        nn.utils.clip_grad_norm_(student_agent.parameters(), args.max_grad_norm)
+                        student_optimizer.step()
+                print(f'student retrain: student steps {e}, kl loss {student_loss}, lr {student_optimizer.param_groups[0]["lr"]}' )
+                wandb.log({'student kl loss': student_loss, 'student lr': student_optimizer.param_groups[0]["lr"], 'student_step': student_step})
+                student_scheduler.step()
+                student_step+=1
 
         # teacher and student co-train
         for step in range(0, args.num_steps):
-            global_step += 1 * args.num_envs
-            teacher_obs[step], student_obs[step] = teacher_next_obs, student_next_obs
-            teacher_dones[step], student_dones[step] = teacher_next_done, student_next_done
+            teacher_step += 1
+            teacher_obs[step] = teacher_next_obs
+            teacher_dones[step] = teacher_next_done
             # ALGO LOGIC: action logic
             with torch.no_grad():
                 teacher_action, teacher_logprob, _, teacher_value, _ = teacher_agent.get_action_and_value(teacher_next_obs)
                 teacher_values[step] = teacher_value.flatten()
-                student_action, student_logprob, _, student_value, _ = student_agent.get_action_and_value(student_next_obs)
-                student_values[step] = student_value.flatten()
-            teacher_actions[step], student_actions[step] = teacher_action, student_action
-            teacher_logprobs[step], student_logprobs[step] = teacher_logprob, student_logprob
+            teacher_actions[step] = teacher_action
+            teacher_logprobs[step] = teacher_logprob
 
             # TRY NOT TO MODIFY: execute the game and log data.
             teacher_next_obs, teacher_reward, teacher_done, teacher_info = teacher_envs.step(teacher_action.cpu().numpy())
-            student_next_obs, student_reward, student_done, student_info = student_envs.step(student_action.cpu().numpy())
-            teacher_rewards[step], student_rewards[step] = torch.tensor(teacher_reward).to(device).view(-1), torch.tensor(student_reward).to(device).view(-1)
+            teacher_rewards[step] = torch.tensor(teacher_reward).to(device).view(-1)
             teacher_next_obs, teacher_next_done = torch.Tensor(teacher_next_obs).to(device), torch.Tensor(teacher_done).to(device)
-            student_next_obs, student_next_done = torch.Tensor(student_next_obs).to(device), torch.Tensor(student_done).to(device)
         
             for item in teacher_info:
                 teacher_finished_frames+=1
@@ -308,20 +334,7 @@ if __name__ == "__main__":
                     else:
                         teacher_avg_return = item["episode"]["r"]
                         teacher_avg_length = item["episode"]["l"]
-                    wandb.log({'teacher avg return': teacher_avg_return, 'teacher avg length': teacher_avg_length}, step=global_step)
-
-            for item in student_info:
-                student_finished_frames+=1
-                if "episode" in item.keys():
-                    student_finished_runs += 1
-                    print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), f"student Agent play result: finished_runs={student_finished_runs}, episodic_return={item['episode']['r']}")
-                    if args.smooth_return:
-                        student_avg_return = 0.9 * student_avg_return + 0.1 * item["episode"]["r"]
-                        student_avg_length = 0.9 * student_avg_length + 0.1 * item["episode"]["l"]
-                    else:
-                        student_avg_return = item["episode"]["r"]
-                        student_avg_length = item["episode"]["l"]
-                    wandb.log({'student avg return': student_avg_return, 'student avg length': student_avg_length}, step=global_step)
+                    wandb.log({'teacher avg return': teacher_avg_return, 'teacher return': item["episode"]["r"]}, step=teacher_step)
 
         with torch.no_grad():
             teacher_next_value = teacher_agent.get_value(teacher_next_obs).reshape(1, -1)
@@ -338,20 +351,6 @@ if __name__ == "__main__":
                 teacher_advantages[t] = lastgaelam = delta + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
             teacher_returns = teacher_advantages + teacher_values
 
-            student_next_value = student_agent.get_value(student_next_obs).reshape(1, -1)
-            student_advantages = torch.zeros_like(student_rewards).to(device)
-            lastgaelam = 0
-            for t in reversed(range(args.num_steps)):
-                if t == args.num_steps - 1:
-                    nextnonterminal = 1.0 - student_next_done
-                    nextvalues = student_next_value
-                else:
-                    nextnonterminal = 1.0 - student_dones[t + 1]
-                    nextvalues = student_values[t + 1]
-                delta = student_rewards[t] + args.gamma * nextvalues * nextnonterminal - student_values[t]
-                student_advantages[t] = lastgaelam = delta + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
-            student_returns = student_advantages + student_values
-
         teacher_b_obs = teacher_obs.reshape((-1,) + teacher_envs.single_observation_space.shape)
         teacher_b_logprobs = teacher_logprobs.reshape(-1)
         teacher_b_actions = teacher_actions.reshape((-1,) + teacher_envs.single_action_space.shape)
@@ -359,58 +358,36 @@ if __name__ == "__main__":
         teacher_b_returns = teacher_returns.reshape(-1)
         teacher_b_values = teacher_values.reshape(-1)
 
-        student_b_obs = student_obs.reshape((-1,) + student_envs.single_observation_space.shape)
-        student_b_logprobs = student_logprobs.reshape(-1)
-        student_b_actions = student_actions.reshape((-1,) + student_envs.single_action_space.shape)
-        student_b_advantages = student_advantages.reshape(-1)
-        student_b_returns = student_returns.reshape(-1)
-        student_b_values = student_values.reshape(-1)
-
         # Optimizing the policy and value network
-        teacher_b_inds, student_b_inds = np.arange(args.batch_size), np.arange(args.batch_size)
-        teacher_clipfracs, student_clipfracs = [], []
+        teacher_b_inds = np.arange(args.batch_size)
+        teacher_clipfracs = []
+        obs_cache.append(teacher_b_obs)
 
         for epoch in range(args.update_epochs):
             np.random.shuffle(teacher_b_inds)
-            np.random.shuffle(student_b_inds)
             for start in range(0, args.batch_size, args.minibatch_size):
                 end = start + args.minibatch_size
                 teacher_mb_inds = teacher_b_inds[start:end]
-                student_mb_inds = student_b_inds[start:end]
                     
                 _, teacher_newlogprob, teacher_entropy, teacher_newvalue, teacher_logits = teacher_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
                 teacher_logratio = teacher_newlogprob - teacher_b_logprobs[teacher_mb_inds]
                 teacher_ratio = teacher_logratio.exp()
-                _, _, _, _, student_on_teacher_logits = student_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
+                _, _, _, _, student_logits = student_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
                 
-                _, student_newlogprob, student_entropy, student_newvalue, student_logits = student_agent.get_action_and_value(student_b_obs[student_mb_inds], student_b_actions.long()[student_mb_inds])
-                student_logratio = student_newlogprob - student_b_logprobs[student_mb_inds]
-                student_ratio = student_logratio.exp()
-                _, _, _, _, teacher_on_student_logits = teacher_agent.get_action_and_value(student_b_obs[student_mb_inds], student_b_actions.long()[student_mb_inds])
-
                 with torch.no_grad():
                     # calculate approx_kl http://joschu.net/blog/kl-approx.html
                     teacher_old_approx_kl = (-teacher_logratio).mean()
                     teacher_approx_kl = ((teacher_ratio - 1) - teacher_logratio).mean()
                     teacher_clipfracs += [((teacher_ratio - 1.0).abs() > args.clip_coef).float().mean().item()]
                     
-                    student_old_approx_kl = (-student_logratio).mean()
-                    student_approx_kl = ((student_ratio - 1) - student_logratio).mean()
-                    student_clipfracs += [((student_ratio - 1.0).abs() > args.clip_coef).float().mean().item()]
-                
                 teacher_mb_advantages = teacher_b_advantages[teacher_mb_inds]
                 if args.norm_adv:
                     teacher_mb_advantages = (teacher_mb_advantages - teacher_mb_advantages.mean()) / (teacher_mb_advantages.std() + 1e-8)
-
-                student_mb_advantages = student_b_advantages[student_mb_inds]
-                if args.norm_adv:
-                    student_mb_advantages = (student_mb_advantages - student_mb_advantages.mean()) / (student_mb_advantages.std() + 1e-8)
 
                 # Policy loss
                 teacher_pg_loss1 = -teacher_mb_advantages * teacher_ratio
                 teacher_pg_loss2 = -teacher_mb_advantages * torch.clamp(teacher_ratio, 1 - args.clip_coef, 1 + args.clip_coef)
                 teacher_pg_loss = torch.max(teacher_pg_loss1, teacher_pg_loss2).mean()
-
                 # Value loss
                 teacher_newvalue = teacher_newvalue.view(-1)
                 if args.clip_vloss:
@@ -425,41 +402,19 @@ if __name__ == "__main__":
                     teacher_v_loss = 0.5 * teacher_v_loss_max.mean()
                 else:
                     teacher_v_loss = 0.5 * ((teacher_newvalue - teacher_b_returns[teacher_mb_inds]) ** 2).mean()
-
-                # Policy loss
-                student_pg_loss1 = -student_mb_advantages * student_ratio
-                student_pg_loss2 = -student_mb_advantages * torch.clamp(student_ratio, 1 - args.clip_coef, 1 + args.clip_coef)
-                student_pg_loss = torch.max(student_pg_loss1, student_pg_loss2).mean()
-
-                # Value loss
-                student_newvalue = student_newvalue.view(-1)
-                if args.clip_vloss:
-                    student_v_loss_unclipped = (student_newvalue - student_b_returns[student_mb_inds]) ** 2
-                    student_v_clipped = student_b_values[student_mb_inds] + torch.clamp(
-                        student_newvalue - student_b_values[student_mb_inds],
-                        -args.clip_coef,
-                        args.clip_coef,
-                    )
-                    student_v_loss_clipped = (student_v_clipped - student_b_returns[student_mb_inds]) ** 2
-                    student_v_loss_max = torch.max(student_v_loss_unclipped, student_v_loss_clipped)
-                    student_v_loss = 0.5 * student_v_loss_max.mean()
-                else:
-                    student_v_loss = 0.5 * ((student_newvalue - student_b_returns[student_mb_inds]) ** 2).mean()
-
-
+                # CE loss
                 teacher_entropy_loss = teacher_entropy.mean()
+
                 teacher_loss = teacher_pg_loss - args.ent_coef * teacher_entropy_loss + teacher_v_loss * args.vf_coef
                 if args.detach:
-                    teacher_loss += args.alpha * kl_div_logits(teacher_logits, student_on_teacher_logits.detach(), args.T)
+                    teacher_loss += teacher_alpha * kl_div_logits(teacher_logits, student_logits.detach(), args.T)
                 else:
-                    teacher_loss += args.alpha * kl_div_logits(teacher_logits, student_on_teacher_logits, args.T)
+                    teacher_loss += teacher_alpha * kl_div_logits(teacher_logits, student_logits, args.T)
 
-                student_entropy_loss = student_entropy.mean()
-                student_loss = student_pg_loss - args.ent_coef * student_entropy_loss + student_v_loss * args.vf_coef
                 if args.detach:
-                    student_loss += args.student_alpha * kl_div_logits(student_logits, teacher_on_student_logits.detach(), args.T)
+                    student_loss = kl_div_logits(student_logits, teacher_logits.detach(), args.T) 
                 else:
-                    student_loss += args.student_alpha * kl_div_logits(student_logits, teacher_on_student_logits, args.T)
+                    student_loss = kl_div_logits(student_logits, teacher_logits, args.T)
 
                 loss =  student_loss + teacher_loss
                 ##### Compute final gradient
@@ -475,43 +430,21 @@ if __name__ == "__main__":
         teacher_var_y = np.var(teacher_y_true)
         teacher_explained_var = np.nan if teacher_var_y == 0 else 1 - np.var(teacher_y_true - teacher_y_pred) / teacher_var_y
 
-        student_y_pred, student_y_true = student_b_values.cpu().numpy(), student_b_returns.cpu().numpy()
-        student_var_y = np.var(student_y_true)
-        student_explained_var = np.nan if student_var_y == 0 else 1 - np.var(student_y_true - student_y_pred) / student_var_y
-
         # TRY NOT TO MODIFY: record rewards for plotting purposes
         wandb.log({'teacher lr': teacher_optimizer.param_groups[0]["lr"]
                    ,'teacher value loss': teacher_v_loss
-                   ,'teacher policy loss': teacher_pg_loss
-                   ,'teacher entropy': teacher_entropy_loss
-                   ,'teacher loss': teacher_loss
-                   ,'teacher old approx kl': teacher_old_approx_kl.item()
-                   ,'teacher approx kl': teacher_approx_kl.item()
-                   ,'teacher clipfrac': np.mean(teacher_clipfracs)
-                   ,'teacher explained variance': teacher_explained_var}, step=global_step)
-
-        wandb.log({'student lr': student_optimizer.param_groups[0]["lr"]
-                   ,'student value loss': student_v_loss
-                   ,'student policy loss': student_pg_loss
-                   ,'student loss': student_loss
-                   ,'student old approx kl': student_old_approx_kl.item()
-                   ,'student approx kl': student_approx_kl.item()
-                   ,'student clipfrac': np.mean(student_clipfracs)
-                   ,'student explained variance': student_explained_var}, step=global_step)
+                   ,'teacher policy loss': teacher_pg_loss}, step=teacher_step)
+        wandb.log({'student kl loss': student_loss, 'student lr': student_optimizer.param_groups[0]["lr"], 'student_step': student_step})
 
         # Annealing the rate if instructed to do so.
         if args.anneal_lr:
-            ######## Original anneal
-            # frac = 1.0 - (update - 1.0) / num_updates
-            # lrnow = frac * args.learning_rate
-            # for i in range(args.num_agent):
-            #     optimizer_list[i].param_groups[0]["lr"] = lrnow
-            # optimizer_consensus.param_groups[0]["lr"] = lrnow
             ####### Cosine anneal
             teacher_scheduler.step()
             student_scheduler.step()
+        student_step+=1
 
     teacher_envs.close()
-    student_envs.close()
+    torch.save(student_agent.state_dict(), args.save+'_student')
+    torch.save(teacher_agent.state_dict(), args.save+'_teacher')
     wandb.finish()
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), "Finished all runs")
