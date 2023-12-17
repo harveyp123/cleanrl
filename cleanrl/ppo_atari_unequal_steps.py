@@ -46,9 +46,7 @@ def parse_args():
         help="whether to capture videos of the agent performances (check out `videos` folder)")
 
     # Algorithm specific arguments
-    parser.add_argument("--student-timesteps", type=int, default=5000000,
-        help="total timesteps of the experiments")
-    parser.add_argument("--distill-timesteps", type=int, default=2000000,
+    parser.add_argument("--student-ratio", type=int, default=1,
         help="total timesteps of the experiments")
     parser.add_argument("--T", type=float, default=1,
         help="kl loss temperature")
@@ -220,15 +218,13 @@ if __name__ == "__main__":
     print(json.dumps(vars(args), indent=4))
     run_name = f"{args.env_id}__alpha{args.alpha_values}__seed{args.seed}__{int(time.time())}"
     wandb.login(key='ca2f2a2ae6e84e31bbc09a8f35f9b9a534dfbe9b')
-    wandb.init(project='ensemble_distill_atari', entity='jincan333', name=args.exp_name)
+    wandb.init(project='ensemble_distill_atari_unequal_steps', entity='jincan333', name=args.exp_name)
     wandb.define_metric('student_step')
     wandb.define_metric("student kl loss", step_metric="student_step")
     wandb.define_metric("student lr", step_metric="student_step")
     #### number of update epochs
     num_updates = args.total_timesteps // args.batch_size
-    student_updates = args.student_timesteps // args.batch_size
-    distill_updates = args.distill_timesteps // args.batch_size
-    print(f'total updates: {num_updates}   distill updates: {distill_updates}   student updates: {student_updates}')
+    print(f'total updates: {num_updates}')
     obs_cache = deque(maxlen=args.obs_num)
 
     # TRY NOT TO MODIFY: seeding
@@ -273,37 +269,6 @@ if __name__ == "__main__":
     teacher_alpha = 0
     start_time = time.time()
     for update in range(1, num_updates + 1):
-        # student retrain
-        if update >= args.threshold*num_updates-100 and update % distill_updates == 0 and update <= num_updates-100:
-            teacher_alpha = args.alpha
-            set_seed(update)
-            del student_agent
-            student_agent = Agent(teacher_envs).to(device)
-            student_optimizer = optim.Adam(student_agent.parameters(), lr=args.student_lr, eps=1e-5, weight_decay=args.student_weight_decay)
-            student_scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer = student_optimizer, T_max = student_updates+distill_updates, 
-                        eta_min = args.learning_rate_min)
-            for e in range(student_updates):
-                teacher_b_obs = obs_cache[e % args.obs_num]
-                np.random.shuffle(teacher_b_inds)
-                for start in range(0, args.batch_size, args.minibatch_size):
-                    end = start + args.minibatch_size
-                    teacher_mb_inds = teacher_b_inds[start:end]
-                    _, _, _, _, teacher_logits = teacher_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
-                    _, _, _, _, student_logits = student_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
-                    if args.detach:
-                        student_loss = kl_div_logits(student_logits, teacher_logits.detach(), args.T)
-                    else:
-                        student_loss = kl_div_logits(student_logits, teacher_logits, args.T)
-                    ##### Compute gradient
-                    student_optimizer.zero_grad()
-                    student_loss.backward()
-                    nn.utils.clip_grad_norm_(student_agent.parameters(), args.max_grad_norm)
-                    student_optimizer.step()
-                print(f'student retrain: student steps {e}, kl loss {student_loss}, lr {student_optimizer.param_groups[0]["lr"]}' )
-                wandb.log({'student kl loss': student_loss, 'student lr': student_optimizer.param_groups[0]["lr"], 'student_step': student_step})
-                student_scheduler.step()
-                student_step+=1
-
         # teacher and student co-train
         for step in range(0, args.num_steps):
             teacher_obs[step] = teacher_next_obs
@@ -423,6 +388,7 @@ if __name__ == "__main__":
                 teacher_optimizer.step()
                 student_optimizer.step()
 
+        student_step+=4
         teacher_y_pred, teacher_y_true = teacher_b_values.cpu().numpy(), teacher_b_returns.cpu().numpy()
         teacher_var_y = np.var(teacher_y_true)
         teacher_explained_var = np.nan if teacher_var_y == 0 else 1 - np.var(teacher_y_true - teacher_y_pred) / teacher_var_y
@@ -433,12 +399,35 @@ if __name__ == "__main__":
                    ,'teacher policy loss': teacher_pg_loss}, step=teacher_finished_frames)
         wandb.log({'student kl loss': student_loss, 'student lr': student_optimizer.param_groups[0]["lr"], 'student_step': student_step})
 
+        # student additional train
+        for _ in range(args.student_ratio):
+            teacher_alpha = args.alpha
+            for e in range(len(obs_cache)):
+                teacher_b_obs = obs_cache[e]
+                np.random.shuffle(teacher_b_inds)
+                for start in range(0, args.batch_size, args.minibatch_size):
+                    end = start + args.minibatch_size
+                    teacher_mb_inds = teacher_b_inds[start:end]
+                    _, _, _, _, teacher_logits = teacher_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
+                    _, _, _, _, student_logits = student_agent.get_action_and_value(teacher_b_obs[teacher_mb_inds], teacher_b_actions.long()[teacher_mb_inds])
+                    if args.detach:
+                        student_loss = kl_div_logits(student_logits, teacher_logits.detach(), args.T)
+                    else:
+                        student_loss = kl_div_logits(student_logits, teacher_logits, args.T)
+                    ##### Compute gradient
+                    student_optimizer.zero_grad()
+                    student_loss.backward()
+                    nn.utils.clip_grad_norm_(student_agent.parameters(), args.max_grad_norm)
+                    student_optimizer.step()
+                print(f'student additional train: student steps {student_step}, kl loss {student_loss}, lr {student_optimizer.param_groups[0]["lr"]}' )
+                wandb.log({'student kl loss': student_loss, 'student lr': student_optimizer.param_groups[0]["lr"], 'student_step': student_step})
+                student_step+=1
+        
         # Annealing the rate if instructed to do so.
         if args.anneal_lr:
             ####### Cosine anneal
             teacher_scheduler.step()
             student_scheduler.step()
-        student_step+=1
 
     teacher_envs.close()
     torch.save(student_agent.state_dict(), args.save+'_student')
